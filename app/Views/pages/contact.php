@@ -28,9 +28,9 @@ $flashErrors  = session()->getFlashdata('errors') ?? [];
         <h1
           data-split="chars"
           aria-label="INITIATE TRANSMISSION"
-          class="font-display section-display-size font-black uppercase tracking-tight text-white"
+          class="font-display text-3xl sm:text-5xl font-black uppercase tracking-tight text-white"
         >
-          INITIATE <span class="text-chrome">TRANSMISSION.</span>
+          INITIATE <span class="text-chrome block">TRANSMISSION.</span>
         </h1>
 
         <p class="text-base sm:text-lg text-[var(--text-dim)] leading-relaxed">
