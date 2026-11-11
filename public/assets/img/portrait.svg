@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" width="900" height="1100">
+  <defs>
+    <radialGradient id="pGlow" cx="50%" cy="38%" r="55%">
+      <stop offset="0%" stop-color="#D4FF1F" stop-opacity="0.32"/>
+      <stop offset="50%" stop-color="#7B5CFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#05060A" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="scan" width="8" height="8" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="8" y2="0" stroke="#EDEFF5" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1100" fill="#05060A"/>
+  <rect width="900" height="1100" fill="url(#pGlow)"/>
+  <circle cx="450" cy="430" r="260" fill="none" stroke="#D4FF1F" stroke-opacity="0.35" stroke-width="1.5"/>
+  <circle cx="450" cy="430" r="310" fill="none" stroke="#2DE2E6" stroke-opacity="0.2" stroke-dasharray="10 8"/>
+  <!-- Stylized Cybernetic Silhouette -->
+  <path d="M 250 920 C 250 710, 650 710, 650 920 Z" fill="#151925" stroke="#D4FF1F" stroke-opacity="0.5" stroke-width="2"/>
+  <circle cx="450" cy="420" r="135" fill="#151925" stroke="#EDEFF5" stroke-opacity="0.35" stroke-width="2"/>
+  <rect x="355" y="385" width="190" height="42" rx="8" fill="#D4FF1F" fill-opacity="0.85"/>
+  <text x="382" y="412" font-family="JetBrains Mono, monospace" font-weight="700" font-size="18" fill="#05060A" letter-spacing="4">NXS//DIRECTOR</text>
+  <rect width="900" height="1100" fill="url(#scan)"/>
+  <rect x="40" y="40" width="820" height="1020" rx="20" fill="none" stroke="#EDEFF5" stroke-opacity="0.14"/>
+  <text x="80" y="95" font-family="JetBrains Mono, monospace" font-size="16" fill="#D4FF1F" letter-spacing="3">ID // MOSTEPHA AMINE BDEIR</text>
+  <text x="80" y="1015" font-family="JetBrains Mono, monospace" font-size="16" fill="#8A90A6" letter-spacing="3">STATUS // CREATIVE TECHNOLOGIST &amp; ARCHITECT</text>
+</svg>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <radialGradient id="glowA_02_detail-02" cx="28%" cy="64%" r="58%">
+      <stop offset="0%" stop-color="#2DE2E6" stop-opacity="0.34"/>
+      <stop offset="45%" stop-color="#D4FF1F" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#05060A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB_02_detail-02" cx="24%" cy="76%" r="50%">
+      <stop offset="0%" stop-color="#7B5CFF" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#05060A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panelGrad_02" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151925" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0B0D14" stop-opacity="0.95"/>
+    </linearGradient>
+    <pattern id="grid_02" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#EDEFF5" stroke-width="1" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <!-- Base Void -->
+  <rect width="1920" height="1080" fill="#05060A"/>
+  <rect width="1920" height="1080" fill="url(#glowA_02_detail-02)"/>
+  <rect width="1920" height="1080" fill="url(#glowB_02_detail-02)"/>
+  <rect width="1920" height="1080" fill="url(#grid_02)"/>
+
+  <!-- Geometric Orbit & Wireframe Waves -->
+  <g stroke="#2DE2E6" stroke-opacity="0.28" fill="none" stroke-width="1.5">
+    <circle cx="1180" cy="520" r="340"/>
+    <circle cx="1180" cy="520" r="240" stroke-dasharray="8 8"/>
+    <circle cx="1180" cy="520" r="140" stroke="#D4FF1F" stroke-opacity="0.45"/>
+    <ellipse cx="1180" cy="520" rx="460" ry="160" transform="rotate(-18 1180 520)"/>
+    <ellipse cx="1180" cy="520" rx="460" ry="160" transform="rotate(24 1180 520)" stroke="#7B5CFF" stroke-opacity="0.25"/>
+    <line x1="720" y1="520" x2="1640" y2="520" stroke-opacity="0.2"/>
+    <line x1="1180" y1="120" x2="1180" y2="920" stroke-opacity="0.2"/>
+  </g>
+
+  <!-- HUD Viewport Frame -->
+  <rect x="80" y="80" width="1760" height="920" rx="24" fill="none" stroke="#EDEFF5" stroke-opacity="0.12" stroke-width="1.5"/>
+
+  <!-- Top Telemetry Bar -->
+  <g font-family="JetBrains Mono, monospace" font-size="18" fill="#8A90A6" letter-spacing="3">
+    <text x="130" y="140" fill="#2DE2E6">NXS // SCENE 02</text>
+    <text x="420" y="140">RESPONSIVE MOBILE HUD ARCHITECTURE</text>
+    <text x="1560" y="140" fill="#EDEFF5">2025 // KRONOS ROBOTICS</text>
+  </g>
+  <line x1="80" y1="175" x2="1840" y2="175" stroke="#EDEFF5" stroke-opacity="0.08"/>
+
+  <!-- Left Control Card -->
+  <rect x="130" y="240" width="680" height="540" rx="20" fill="url(#panelGrad_02)" stroke="#2DE2E6" stroke-opacity="0.35" stroke-width="1.5"/>
+  <text x="180" y="315" font-family="JetBrains Mono, monospace" font-size="16" fill="#2DE2E6" letter-spacing="4">// ACTIVE MODULE_02</text>
+  <text x="180" y="395" font-family="Unbounded, Syne, sans-serif" font-weight="800" font-size="54" fill="#EDEFF5" letter-spacing="-1">KRONOS TELEMETRY</text>
+  <text x="180" y="445" font-family="Inter Tight, sans-serif" font-size="22" fill="#8A90A6">AUTONOMOUS FLEET SPATIAL COMMAND</text>
+
+  <!-- Telemetry Metric Bars -->
+  <g transform="translate(180, 500)">
+    <rect x="0" y="0" width="580" height="58" rx="10" fill="#05060A" stroke="#EDEFF5" stroke-opacity="0.1"/>
+    <rect x="0" y="0" width="460" height="58" rx="10" fill="#2DE2E6" fill-opacity="0.12"/>
+    <text x="24" y="36" font-family="JetBrains Mono, monospace" font-size="17" fill="#2DE2E6" letter-spacing="2">01 // 120K EVENTS/SEC</text>
+
+    <rect x="0" y="78" width="580" height="58" rx="10" fill="#05060A" stroke="#EDEFF5" stroke-opacity="0.1"/>
+    <rect x="0" y="78" width="510" height="58" rx="10" fill="#D4FF1F" fill-opacity="0.15"/>
+    <text x="24" y="114" font-family="JetBrains Mono, monospace" font-size="17" fill="#EDEFF5" letter-spacing="2">02 // 4.2X TRIAGE SPEED</text>
+
+    <rect x="0" y="156" width="580" height="58" rx="10" fill="#05060A" stroke="#EDEFF5" stroke-opacity="0.1"/>
+    <rect x="0" y="156" width="420" height="58" rx="10" fill="#7B5CFF" fill-opacity="0.14"/>
+    <text x="24" y="192" font-family="JetBrains Mono, monospace" font-size="17" fill="#EDEFF5" letter-spacing="2">03 // INSTANCED RADAR</text>
+  </g>
+
+  <!-- Right Shader Waveform Nodes -->
+  <g transform="translate(960, 320)">
+    <rect x="0" y="0" width="740" height="440" rx="20" fill="#0B0D14" fill-opacity="0.72" stroke="#EDEFF5" stroke-opacity="0.14"/>
+    <path d="M 40 320 Q 150 120, 260 260 T 480 180 T 700 220" fill="none" stroke="#2DE2E6" stroke-width="4"/>
+    <path d="M 40 350 Q 180 200, 310 300 T 540 240 T 700 140" fill="none" stroke="#D4FF1F" stroke-width="2.5" stroke-dasharray="6 6"/>
+    <circle cx="260" cy="260" r="8" fill="#2DE2E6"/>
+    <circle cx="480" cy="180" r="8" fill="#2DE2E6"/>
+    <circle cx="700" cy="220" r="8" fill="#2DE2E6"/>
+    <text x="40" y="55" font-family="JetBrains Mono, monospace" font-size="15" fill="#8A90A6" letter-spacing="3">REALTIME_FBM_DISPLACEMENT // 60.0 FPS</text>
+    <text x="540" y="55" font-family="JetBrains Mono, monospace" font-size="15" fill="#2DE2E6" letter-spacing="2">● LIVE STREAM</text>
+  </g>
+
+  <!-- Bottom Status Strip -->
+  <line x1="80" y1="910" x2="1840" y2="910" stroke="#EDEFF5" stroke-opacity="0.08"/>
+  <g font-family="JetBrains Mono, monospace" font-size="16" fill="#8A90A6" letter-spacing="3">
+    <text x="130" y="958">COORD // X:1440 Y:0900</text>
+    <text x="820" y="958" fill="#2DE2E6">[ DISPLACEMENT SHADER READY ]</text>
+    <text x="1550" y="958">NEXUS-FOLIO STUDIO</text>
+  </g>
+</svg>
