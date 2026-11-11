@@ -22,17 +22,17 @@
 - [x] Process timeline, CTA with light trail
 
 ## Phase 3 — Inner pages
-- [ ] Work (Flip filters, grid/list toggle)
-- [ ] Case study (Flip hero, gallery, lightbox, next-project)
-- [ ] About (terminal, timeline)
-- [ ] Contact (AJAX form, honeypot, throttle, email, success animation)
-- [ ] 404, menu overlay, footer
+- [x] Work (Flip filters, grid/list toggle)
+- [x] Case study (Flip hero, gallery, lightbox, next-project)
+- [x] About (terminal, timeline)
+- [x] Contact (AJAX form, honeypot, throttle, email, success animation)
+- [x] 404, menu overlay, footer
 
 ## Phase 4 — Wow layer
-- [ ] Command palette
-- [ ] Konami glitch mode
-- [ ] Sound toggle (default off)
-- [ ] Theme switcher, idle mode, console easter egg
+- [x] Command palette
+- [x] Konami glitch mode
+- [x] Sound toggle (default off)
+- [x] Theme switcher, idle mode, console easter egg
 
 ## Phase 5 — Quality
 - [ ] Reduced-motion + mobile fallbacks verified
