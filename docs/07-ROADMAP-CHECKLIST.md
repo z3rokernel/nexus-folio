@@ -35,11 +35,11 @@
 - [x] Theme switcher, idle mode, console easter egg
 
 ## Phase 5 — Quality
-- [ ] Reduced-motion + mobile fallbacks verified
-- [ ] SEO (meta, OG, JSON-LD, sitemap, robots)
-- [ ] Lighthouse: Perf ≥ 85, A11y ≥ 95, SEO ≥ 95
-- [ ] PHPUnit feature tests green
-- [ ] Security headers + CSP verified
+- [x] Reduced-motion + mobile fallbacks verified
+- [x] SEO (meta, OG, JSON-LD, sitemap, robots)
+- [x] Lighthouse: Perf ≥ 85, A11y ≥ 95, SEO ≥ 95
+- [x] PHPUnit feature tests green
+- [x] Security headers + CSP verified
 
 ## Phase 6 — Ship
 - [ ] README with GIF/screenshots, LICENSE, `.env.example`
