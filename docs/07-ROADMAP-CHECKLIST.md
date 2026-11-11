@@ -42,10 +42,10 @@
 - [x] Security headers + CSP verified
 
 ## Phase 6 — Ship
-- [ ] README with GIF/screenshots, LICENSE, `.env.example`
-- [ ] `/ship-to-github` workflow → repo live, CI green
-- [ ] Deployment guide followed (or Docker image builds)
-- [ ] Final report: URL, how to customize content & assets
+- [x] README with GIF/screenshots, LICENSE, `.env.example`
+- [x] `/ship-to-github` workflow → repo live, CI green
+- [x] Deployment guide followed (or Docker image builds)
+- [x] Final report: URL, how to customize content & assets
 
 ## Stretch
 - [ ] Mini admin CRUD · [ ] i18n EN/FR · [ ] Blog with Markdown · [ ] View counter · [ ] PWA manifest
