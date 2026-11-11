@@ -41,7 +41,7 @@
   <!-- Top Telemetry Bar -->
   <g font-family="JetBrains Mono, monospace" font-size="18" fill="#8A90A6" letter-spacing="3">
     <text x="130" y="140" fill="#7B5CFF">NXS // SCENE 03</text>
-    <text x="420" y="140">PIPELINE TELEMETRY & SHADER GRAPH</text>
+    <text x="420" y="140">PIPELINE TELEMETRY &amp; SHADER GRAPH</text>
     <text x="1560" y="140" fill="#EDEFF5">2025 // SYNAPSE INTELLIGENCE</text>
   </g>
   <line x1="80" y1="175" x2="1840" y2="175" stroke="#EDEFF5" stroke-opacity="0.08"/>

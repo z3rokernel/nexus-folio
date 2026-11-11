@@ -7,19 +7,19 @@
 - [x] Commit `chore: scaffold…`
 
 ## Phase 1 — Motion core
-- [ ] Lenis ↔ ScrollTrigger sync
-- [ ] Barba wrapper/container + base transition
-- [ ] Module lifecycle (`init/destroy`) + motion-prefs
-- [ ] Custom cursor, grain overlay, HUD frame
-- [ ] Preloader ("Generating…")
+- [x] Lenis ↔ ScrollTrigger sync
+- [x] Barba wrapper/container + base transition
+- [x] Module lifecycle (`init/destroy`) + motion-prefs
+- [x] Custom cursor, grain overlay, HUD frame
+- [x] Preloader ("Generating…")
 
 ## Phase 2 — Home experience
-- [ ] Hero liquid shader + headline + magnetic CTAs
-- [ ] Intro scrub-reveal statement
-- [ ] Project Reel (pinned horizontal + WebGL hover distortion)
-- [ ] Marquee, Capabilities tilt-cards
-- [ ] Skills physics playground, Stats + GitHub heat-grid
-- [ ] Process timeline, CTA with light trail
+- [x] Hero liquid shader + headline + magnetic CTAs
+- [x] Intro scrub-reveal statement
+- [x] Project Reel (pinned horizontal + WebGL hover distortion)
+- [x] Marquee, Capabilities tilt-cards
+- [x] Skills physics playground, Stats + GitHub heat-grid
+- [x] Process timeline, CTA with light trail
 
 ## Phase 3 — Inner pages
 - [ ] Work (Flip filters, grid/list toggle)

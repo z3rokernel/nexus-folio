@@ -50,7 +50,7 @@
   <rect x="130" y="240" width="680" height="540" rx="20" fill="url(#panelGrad_01)" stroke="#D4FF1F" stroke-opacity="0.35" stroke-width="1.5"/>
   <text x="180" y="315" font-family="JetBrains Mono, monospace" font-size="16" fill="#D4FF1F" letter-spacing="4">// ACTIVE MODULE_01</text>
   <text x="180" y="395" font-family="Unbounded, Syne, sans-serif" font-weight="800" font-size="54" fill="#EDEFF5" letter-spacing="-1">AETHER ENGINE</text>
-  <text x="180" y="445" font-family="Inter Tight, sans-serif" font-size="22" fill="#8A90A6">GENERATIVE VIDEO & SHADER WORKSTATION</text>
+  <text x="180" y="445" font-family="Inter Tight, sans-serif" font-size="22" fill="#8A90A6">GENERATIVE VIDEO &amp; SHADER WORKSTATION</text>
 
   <!-- Telemetry Metric Bars -->
   <g transform="translate(180, 500)">
