@@ -72,14 +72,14 @@
 
       <div class="flex flex-wrap items-center gap-4 pt-2">
         <?= view('components/button', [
-            'label'   => 'DOWNLOAD CV (PDF)',
-            'href'    => base_url('cv.pdf'),
+            'label'   => 'EXPERIENCE & EDUCATION',
+            'href'    => '#experience-timeline',
             'primary' => true,
-            'icon'    => 'file-down',
+            'icon'    => 'graduation-cap',
             'cursor'  => 'link',
         ]) ?>
         <?= view('components/button', [
-            'label'   => 'INITIATE CONTACT',
+            'label'   => 'CONTACT ME',
             'href'    => base_url('contact'),
             'primary' => false,
             'icon'    => 'send',
@@ -111,8 +111,10 @@
         </div>
         <div class="flex items-center gap-2">
           <button type="button" data-term-quick="whoami" class="px-2 py-0.5 rounded bg-white/5 hover:bg-[var(--acid)] hover:text-[var(--void)] text-[10px] text-[var(--acid)] transition-colors">whoami</button>
+          <button type="button" data-term-quick="exp" class="px-2 py-0.5 rounded bg-white/5 hover:bg-[var(--acid)] hover:text-[var(--void)] text-[10px] text-[var(--acid)] transition-colors">exp</button>
           <button type="button" data-term-quick="skills" class="px-2 py-0.5 rounded bg-white/5 hover:bg-[var(--acid)] hover:text-[var(--void)] text-[10px] text-[var(--acid)] transition-colors">skills</button>
           <button type="button" data-term-quick="projects" class="px-2 py-0.5 rounded bg-white/5 hover:bg-[var(--acid)] hover:text-[var(--void)] text-[10px] text-[var(--acid)] transition-colors">projects</button>
+          <button type="button" data-term-quick="bgm" class="px-2 py-0.5 rounded bg-white/5 hover:bg-[var(--acid)] hover:text-[var(--void)] text-[10px] text-[var(--acid)] transition-colors">bgm</button>
           <button type="button" data-term-quick="help" class="px-2 py-0.5 rounded bg-white/5 hover:bg-[var(--acid)] hover:text-[var(--void)] text-[10px] text-[var(--acid)] transition-colors">help</button>
         </div>
       </div>
@@ -147,23 +149,34 @@
   </section>
 
   <!-- ===================================================================
-       SECTION 03 // EXPERIENCE TIMELINE & "CURRENTLY" TELEMETRY WIDGET
+       SECTION 03 // EXPERIENCE & EDUCATION TIMELINE + LIVE WIDGET
        =================================================================== -->
-  <section data-scene="03" data-scene-label="EXPERIENCE TIMELINE" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+  <section id="experience-timeline" data-scene="03" data-scene-label="EXPERIENCE & STUDIES" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start scroll-mt-28">
     <div class="lg:col-span-8 space-y-10">
       <?= view('components/section-title', [
           'index'    => '03',
-          'label'    => 'CAREER TRAJECTORY',
-          'title'    => 'EXPERIENCE LOG',
+          'label'    => 'EXPERIENCE & ACADEMIC STUDIES',
+          'title'    => 'CAREER & EDUCATION',
+          'subtitle' => '8+ years of Full-Stack freelance engineering and university degrees in Intelligent Computer Systems (Master Level 7).',
       ]) ?>
 
       <div class="space-y-6">
         <?php foreach ($experiences as $exp): ?>
+          <?php
+            $isEdu = str_contains(strtolower($exp['role'] . ' ' . $exp['company']), 'master')
+                  || str_contains(strtolower($exp['role'] . ' ' . $exp['company']), 'licence')
+                  || str_contains(strtolower($exp['role'] . ' ' . $exp['company']), 'université');
+          ?>
           <article class="glass-card p-7 sm:p-8 border border-white/15 hover:border-[var(--acid)] transition-colors space-y-4">
             <div class="flex flex-wrap items-center justify-between gap-2">
-              <span class="font-mono text-xs tracking-[0.18em] uppercase text-[var(--acid)]">
-                <?= esc($exp['start']) ?> — <?= esc($exp['end']) ?>
-              </span>
+              <div class="flex items-center gap-2.5">
+                <span class="px-2.5 py-0.5 rounded-full font-mono text-[10px] tracking-[0.16em] uppercase <?= $isEdu ? 'bg-[var(--cyan)]/15 text-[var(--cyan)] border border-[var(--cyan)]/40' : 'bg-[var(--acid)]/15 text-[var(--acid)] border border-[var(--acid)]/40' ?>">
+                  <?= $isEdu ? 'ACADEMIC STUDY' : 'EXPERIENCE' ?>
+                </span>
+                <span class="font-mono text-xs tracking-[0.18em] uppercase text-[var(--acid)]">
+                  <?= esc($exp['start']) ?> — <?= esc($exp['end']) ?>
+                </span>
+              </div>
               <span class="font-mono text-xs tracking-[0.16em] uppercase text-[var(--text-dim)]">
                 <?= esc($exp['company']) ?>
               </span>

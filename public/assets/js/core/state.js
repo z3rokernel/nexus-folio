@@ -4,6 +4,7 @@
 
 const THEME_KEY = 'nexus_theme';
 const SOUND_KEY = 'nexus_sound';
+const BGM_KEY = 'nexus_bgm';
 
 export const THEMES = ['acid', 'plasma', 'cyan'];
 
@@ -16,6 +17,7 @@ export const THEME_COLORS = {
 export const state = {
   theme: 'acid',
   soundEnabled: false,
+  bgmEnabled: false,
   glitchMode: false,
   menuOpen: false,
   paletteOpen: false,
@@ -74,6 +76,15 @@ export function setSoundEnabled(enabled) {
   } catch (_) {}
   notify('sound', state.soundEnabled);
   return state.soundEnabled;
+}
+
+export function setBgmEnabled(enabled) {
+  state.bgmEnabled = Boolean(enabled);
+  try {
+    localStorage.setItem(BGM_KEY, state.bgmEnabled ? '1' : '0');
+  } catch (_) {}
+  notify('bgm', state.bgmEnabled);
+  return state.bgmEnabled;
 }
 
 export function subscribeState(fn) {

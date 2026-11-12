@@ -23,7 +23,7 @@
       <input
         type="text"
         id="command-palette-input"
-        placeholder="Type a command or search scenes (e.g. 'Aether', 'Theme', 'Copy email', 'CV')…"
+        placeholder="Type a command or search scenes (e.g. 'Shopping France', 'Music', 'Experience', 'Theme')…"
         autocomplete="off"
         class="w-full bg-transparent text-white placeholder-[var(--text-dim)] font-mono text-sm focus:outline-none"
         aria-label="Search commands and projects"
@@ -105,26 +105,37 @@
       <?php endforeach; ?>
 
       <!-- System Actions -->
-      <li data-cmd-item data-type="action" data-action="copy-email" data-email="<?= esc($site['email'] ?? 'contact@nexus-folio.dev') ?>" data-keywords="copy email address mail clipboard" role="option" tabindex="-1" class="cmd-row flex items-center justify-between px-4 py-3 rounded-xl cursor-pointer hover:bg-white/5 transition-colors">
+      <li data-cmd-item data-type="action" data-action="copy-email" data-email="<?= esc($site['email'] ?? 'contact@mabdeira.dev') ?>" data-keywords="copy email address mail clipboard" role="option" tabindex="-1" class="cmd-row flex items-center justify-between px-4 py-3 rounded-xl cursor-pointer hover:bg-white/5 transition-colors">
         <div class="flex items-center gap-3">
           <i data-lucide="copy" class="w-4 h-4 text-[var(--plasma)]"></i>
           <div>
             <p class="font-mono text-xs font-semibold text-white uppercase tracking-wider">Action // Copy Email Address</p>
-            <p class="text-xs text-[var(--text-dim)]">Copy <?= esc($site['email'] ?? 'contact@nexus-folio.dev') ?> to clipboard</p>
+            <p class="text-xs text-[var(--text-dim)]">Copy <?= esc($site['email'] ?? 'contact@mabdeira.dev') ?> to clipboard</p>
           </div>
         </div>
         <span class="font-mono text-[10px] uppercase tracking-widest text-white/60">ACTION</span>
       </li>
 
-      <li data-cmd-item data-type="action" data-action="download-cv" data-href="<?= base_url('cv.pdf') ?>" data-keywords="download cv resume pdf curriculum" role="option" tabindex="-1" class="cmd-row flex items-center justify-between px-4 py-3 rounded-xl cursor-pointer hover:bg-white/5 transition-colors">
+      <li data-cmd-item data-type="nav" data-href="<?= base_url('about#experience-timeline') ?>" data-keywords="experience education study master degree career timeline" role="option" tabindex="-1" class="cmd-row flex items-center justify-between px-4 py-3 rounded-xl cursor-pointer hover:bg-white/5 transition-colors">
         <div class="flex items-center gap-3">
-          <i data-lucide="file-down" class="w-4 h-4 text-[var(--plasma)]"></i>
+          <i data-lucide="graduation-cap" class="w-4 h-4 text-[var(--plasma)]"></i>
           <div>
-            <p class="font-mono text-xs font-semibold text-white uppercase tracking-wider">Action // Download CV (PDF)</p>
-            <p class="text-xs text-[var(--text-dim)]">Open curriculum vitae in new tab</p>
+            <p class="font-mono text-xs font-semibold text-white uppercase tracking-wider">View Experience &amp; Academic Studies</p>
+            <p class="text-xs text-[var(--text-dim)]">8+ yrs Full-Stack Freelance &amp; Master Level 7 (Intelligent Computer Systems)</p>
           </div>
         </div>
-        <span class="font-mono text-[10px] uppercase tracking-widest text-white/60">PDF</span>
+        <span class="font-mono text-[10px] uppercase tracking-widest text-white/60">TIMELINE</span>
+      </li>
+
+      <li data-cmd-item data-type="action" data-action="toggle-bgm" data-keywords="music background ambient synthwave soundtrack play pause bgm" role="option" tabindex="-1" class="cmd-row flex items-center justify-between px-4 py-3 rounded-xl cursor-pointer hover:bg-white/5 transition-colors">
+        <div class="flex items-center gap-3">
+          <i data-lucide="music" class="w-4 h-4 text-[var(--acid)]"></i>
+          <div>
+            <p class="font-mono text-xs font-semibold text-white uppercase tracking-wider">Action // Toggle Background Music (BGM)</p>
+            <p class="text-xs text-[var(--text-dim)]">Play or pause atmospheric sci-fi ambient synth soundtrack</p>
+          </div>
+        </div>
+        <span class="font-mono text-[10px] uppercase tracking-widest text-[var(--acid)]">MUSIC</span>
       </li>
 
       <li data-cmd-item data-type="action" data-action="cycle-theme" data-keywords="switch theme color acid lime plasma violet cyan" role="option" tabindex="-1" class="cmd-row flex items-center justify-between px-4 py-3 rounded-xl cursor-pointer hover:bg-white/5 transition-colors">

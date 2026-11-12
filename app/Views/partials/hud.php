@@ -78,7 +78,23 @@ $current = $namespace ?? 'home';
         <span id="hud-theme-label" class="hidden md:inline uppercase">ACID</span>
       </button>
 
-      <!-- Sound Toggle Button (Default OFF) -->
+      <!-- Background Music Toggle Button (Independent from SFX) -->
+      <button
+        type="button"
+        id="hud-bgm-btn"
+        data-magnetic
+        data-cursor="link"
+        aria-pressed="false"
+        class="inline-flex items-center gap-1.5 px-3 py-2 rounded-full bg-[#0B0D14]/80 backdrop-blur-md border border-white/10 hover:border-[var(--acid)]/60 font-mono text-[11px] tracking-[0.12em] text-[var(--text-dim)] hover:text-white transition-colors"
+        aria-label="Toggle Ambient Background Music"
+        title="Toggle Background Synth Music"
+      >
+        <i data-lucide="music" class="w-3.5 h-3.5"></i>
+        <span id="hud-bgm-dot" class="w-1.5 h-1.5 rounded-full bg-white/30"></span>
+        <span id="hud-bgm-label" class="hidden xl:inline">BGM:OFF</span>
+      </button>
+
+      <!-- Sound Effects Toggle Button (Default OFF) -->
       <button
         type="button"
         id="hud-sound-btn"
@@ -87,7 +103,7 @@ $current = $namespace ?? 'home';
         aria-pressed="false"
         class="inline-flex items-center gap-1.5 px-3 py-2 rounded-full bg-[#0B0D14]/80 backdrop-blur-md border border-white/10 hover:border-[var(--acid)]/60 font-mono text-[11px] tracking-[0.12em] text-[var(--text-dim)] hover:text-white transition-colors"
         aria-label="Toggle UI Sound Effects"
-        title="Toggle Studio Audio"
+        title="Toggle UI Sound Effects"
       >
         <i data-lucide="volume-x" id="hud-sound-icon" class="w-3.5 h-3.5"></i>
         <span id="hud-sound-label" class="hidden xl:inline">SFX:OFF</span>

@@ -109,7 +109,7 @@ $navItems = [
       <button type="button" data-copy-email="<?= esc($site['email'] ?? 'contact@mabdeira.dev') ?>" class="hover:text-[var(--acid)] transition-colors">
         <?= esc($site['email'] ?? 'contact@mabdeira.dev') ?> [COPY]
       </button>
-      <a href="<?= base_url('cv.pdf') ?>" target="_blank" rel="noopener" class="text-[var(--acid)] hover:underline">DOWNLOAD CV.PDF</a>
+      <a href="<?= base_url('about#experience-timeline') ?>" data-menu-link class="text-[var(--acid)] hover:underline">EXPERIENCE &amp; STUDIES →</a>
     </div>
   </div>
 </div>

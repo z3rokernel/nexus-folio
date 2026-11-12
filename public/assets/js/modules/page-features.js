@@ -4,6 +4,7 @@
 import { prefersReduced, toggleReducedMotion } from '../core/motion-prefs.js';
 import { setTheme, THEME_COLORS, state } from '../core/state.js';
 import { showToast } from '../core/utils.js';
+import { toggleBgm } from './sound.js';
 
 let cleanups = [];
 
@@ -224,18 +225,28 @@ function initAboutTerminal(container) {
         `<div class="pl-4 text-[var(--cyan)] space-y-1">
           <div>Available commands:</div>
           <div>· <span class="text-white">whoami</span> — Developer &amp; QA profile</div>
+          <div>· <span class="text-white">exp</span> — Professional Experience &amp; Academic Studies</div>
           <div>· <span class="text-white">skills</span> — Full-Stack, QA Testing &amp; AI capabilities</div>
           <div>· <span class="text-white">projects</span> — List active portfolio projects</div>
           <div>· <span class="text-white">contact</span> — Display direct contact channels</div>
+          <div>· <span class="text-white">bgm</span> — Toggle ambient synth background music</div>
           <div>· <span class="text-white">theme acid|plasma|cyan</span> — Live-swap studio accent token</div>
           <div>· <span class="text-white">motion</span> — Toggle reduced-motion accessibility mode</div>
-          <div>· <span class="text-white">cv</span> — Open curriculum vitae (PDF)</div>
           <div>· <span class="text-white">clear</span> — Clear terminal buffer</div>
         </div>`
       );
     } else if (cmd === 'whoami') {
       appendLine(
         `<div class="pl-4 text-white/90">Mostepha Amine Bdeira // Full-Stack Web Developer &amp; QA Tester based in Lyon, France. 8+ years freelance experience, 30+ web apps delivered, Master Level 7 in Intelligent Computer Systems.</div>`
+      );
+    } else if (cmd === 'exp' || cmd === 'education' || cmd === 'study' || cmd === 'cv') {
+      appendLine(
+        `<div class="pl-4 text-white/90 space-y-1">
+          <div><span class="text-[var(--acid)]">[2026–Present]</span> Développeur Web Indépendant (Lyon) — PHP, Laravel, CodeIgniter 4, MySQL/PostgreSQL, Postman &amp; PHPUnit QA</div>
+          <div><span class="text-[var(--acid)]">[2017–2025]</span> Développeur Web Full-Stack Freelance | M4B Designs — 30+ custom web platforms delivered</div>
+          <div><span class="text-[var(--cyan)]">[2022–2024]</span> Master en Systèmes Informatiques Intelligents (Level 7 ENIC-NARIC) — UCBET</div>
+          <div><span class="text-[var(--cyan)]">[2019–2022]</span> Licence en Systèmes Informatiques — UCBET</div>
+        </div>`
       );
     } else if (cmd === 'skills' || cmd === 'cat skills.txt') {
       appendLine(
@@ -249,6 +260,9 @@ function initAboutTerminal(container) {
       appendLine(
         `<div class="pl-4 text-[var(--cyan)]">Email: contact@mabdeira.dev · Phone: +33 6 15 21 88 14 · Location: Lyon, France · Route: <a href="/contact" class="underline text-[var(--acid)]">/contact</a></div>`
       );
+    } else if (cmd === 'bgm' || cmd === 'music') {
+      const playing = toggleBgm();
+      appendLine(`<div class="pl-4 text-[var(--acid)]">// Ambient synth background music: ${playing ? 'PLAYING' : 'PAUSED'}</div>`);
     } else if (cmd.startsWith('theme')) {
       const parts = cmd.split(/\s+/);
       const t = parts[1] || 'acid';
@@ -261,9 +275,6 @@ function initAboutTerminal(container) {
     } else if (cmd === 'motion') {
       const enabled = toggleReducedMotion();
       appendLine(`<div class="pl-4 text-white">// Reduced motion: ${enabled ? 'ENABLED' : 'DISABLED'}</div>`);
-    } else if (cmd === 'cv') {
-      window.open('/cv.pdf', '_blank');
-      appendLine(`<div class="pl-4 text-[var(--acid)]">// Opening /cv.pdf in new tab…</div>`);
     } else if (cmd === 'clear') {
       output.innerHTML = '';
     } else {

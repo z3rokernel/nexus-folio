@@ -5,7 +5,7 @@ import { state, cycleTheme } from '../core/state.js';
 import { prefersReduced, toggleReducedMotion } from '../core/motion-prefs.js';
 import { copyToClipboard, showToast } from '../core/utils.js';
 import { stopScroll, startScroll } from '../core/lenis.js';
-import { toggleSound } from './sound.js';
+import { toggleSound, toggleBgm } from './sound.js';
 import { toggleKonamiGlitch } from './konami.js';
 import { navigateToUrl } from '../core/barba.js';
 
@@ -77,9 +77,8 @@ export function initCommandPalette() {
     if (action === 'copy-email') {
       const email = item.getAttribute('data-email') || 'contact@mabdeira.dev';
       copyToClipboard(email, 'EMAIL COPIED');
-    } else if (action === 'download-cv') {
-      const href = item.getAttribute('data-href') || '/cv.pdf';
-      window.open(href, '_blank');
+    } else if (action === 'toggle-bgm') {
+      toggleBgm();
     } else if (action === 'cycle-theme') {
       const next = cycleTheme();
       showToast(`// THEME SWITCHED TO: ${next.toUpperCase()}`);
