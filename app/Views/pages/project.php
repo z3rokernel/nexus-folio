@@ -12,6 +12,66 @@ $results     = $project['results'] ?? [];
 $stack       = $project['stack'] ?? [];
 $tags        = $project['tags'] ?? [];
 $nextProject = $project['next_project'] ?? null;
+$slug        = (string) ($project['slug'] ?? '');
+
+// Project-specific Engineering & QA Blueprint data
+$blueprints = [
+    'shopping-france' => [
+        'pipeline' => [
+            ['step' => '01', 'title' => 'Social Ad Traffic', 'desc' => 'Facebook & Instagram ad campaigns land on mobile-first Tailwind CSS product pages (< 1.2s load).', 'badge' => 'ACQUISITION'],
+            ['step' => '02', 'title' => '1-Page COD Checkout', 'desc' => 'Frictionless Cash-on-Delivery order form with strict French phone format & CSRF validation.', 'badge' => 'CONVERSION'],
+            ['step' => '03', 'title' => 'CodeIgniter 4 & MySQL', 'desc' => 'Atomic SQL transaction records order, customer, and decrements live product inventory.', 'badge' => 'PERSISTENCE'],
+            ['step' => '04', 'title' => 'SMS & Email REST APIs', 'desc' => 'Instant SMS confirmation + transactional HTML email dispatched via third-party REST webhooks.', 'badge' => 'NOTIFICATION'],
+        ],
+        'backend' => [
+            'schema'    => 'MySQL 8 Normalized Schema: `products`, `product_variants`, `orders` (COD state machine), `order_items`, `api_sms_logs`.',
+            'endpoints' => 'POST `/checkout/cod-order` (Order Creation + Stock Lock) · POST `/api/webhooks/sms-status` (Delivery Callback) · GET `/admin/orders/export`.',
+            'security'  => 'CodeIgniter 4 CSRF protection, honeypot anti-bot fields, strict server-side phone/postal validation, and duplicate order throttling.',
+        ],
+        'qa' => [
+            'postman'   => '28 Postman API assertions covering valid COD orders (HTTP 201), invalid phone rejection (HTTP 422), and SMS gateway webhook callbacks.',
+            'phpunit'   => 'Automated feature tests verifying MySQL stock decrements, order total calculations, and fallback handling when external APIs timeout.',
+            'debugging' => 'Custom server log parser tracking SMS delivery rates (99.4%) and identifying failed webhook retries in production.',
+        ],
+    ],
+    'deep-learning-elearning' => [
+        'pipeline' => [
+            ['step' => '01', 'title' => 'Learner Telemetry', 'desc' => 'Captures quiz scores, time-on-module, and error patterns across computer science courses.', 'badge' => 'DATA INPUT'],
+            ['step' => '02', 'title' => 'Neural Recommendation', 'desc' => 'Deep learning collaborative filtering ranks the next optimal learning modules per student.', 'badge' => 'DEEP LEARNING'],
+            ['step' => '03', 'title' => 'AI Exercise Synthesis', 'desc' => 'Generates personalized practice exercises & difficulty-adjusted quizzes automatically.', 'badge' => 'GENERATIVE AI'],
+            ['step' => '04', 'title' => 'Instructor Analytics', 'desc' => 'Web dashboard displays mastery heatmaps and cohort progression metrics.', 'badge' => 'EVALUATION'],
+        ],
+        'backend' => [
+            'schema'    => 'Relational schema storing `learners`, `course_modules`, `knowledge_states`, `generated_exercises`, and `recommendation_logs`.',
+            'endpoints' => 'GET `/api/recommendations/{learnerId}` · POST `/api/exercises/generate` · POST `/api/telemetry/attempt`.',
+            'security'  => 'Role-based access control separating Student, Instructor, and Research Admin views with anonymized dataset exports.',
+        ],
+        'qa' => [
+            'postman'   => 'REST API contract tests validating inference response payloads, latency thresholds, and fallback course rankings.',
+            'phpunit'   => 'Unit & integration tests verifying scoring algorithms, progression unlocks, and database integrity.',
+            'debugging' => 'Model evaluation pipeline measuring recommendation precision/recall and exercise difficulty calibration (Master Level 7 Thesis).',
+        ],
+    ],
+];
+
+$bp = $blueprints[$slug] ?? [
+    'pipeline' => [
+        ['step' => '01', 'title' => 'Requirements & Specs', 'desc' => 'Business requirements analysis, database modeling, and REST API contract definition.', 'badge' => 'SPECIFICATION'],
+        ['step' => '02', 'title' => 'MVC Backend & SQL', 'desc' => 'Clean PHP (CodeIgniter 4 / Laravel) controllers paired with indexed MySQL/PostgreSQL tables.', 'badge' => 'ENGINEERING'],
+        ['step' => '03', 'title' => 'QA & API Verification', 'desc' => 'Comprehensive Postman collection testing, PHPUnit assertions, and edge-case validation.', 'badge' => 'QUALITY ASSURANCE'],
+        ['step' => '04', 'title' => 'Linux Deployment', 'desc' => 'Production release with SSL, security headers, automated backups, and performance monitoring.', 'badge' => 'PRODUCTION'],
+    ],
+    'backend' => [
+        'schema'    => 'Normalized relational database design (MySQL / PostgreSQL) with foreign-key integrity, composite indexes, and migration version control.',
+        'endpoints' => 'RESTful JSON & SSR endpoints built with strict input validation, structured error responses (400/422/429), and caching.',
+        'security'  => 'CSRF token verification, SQL injection prevention via prepared statements, XSS output escaping (`esc()`), and rate limiting.',
+    ],
+    'qa' => [
+        'postman'   => 'End-to-end Postman test suites verifying authentication, CRUD operations, pagination, and malformed payload handling.',
+        'phpunit'   => 'Automated PHPUnit feature and model tests ensuring zero regressions across database transactions and business logic.',
+        'debugging' => 'Proactive log inspection, SQL query profiling (`EXPLAIN`), and structured bug triage reports.',
+    ],
+];
 ?>
 
 <article data-scene="01" data-scene-label="CASE STUDY // <?= esc($project['title']) ?>" class="pt-32 pb-20">
@@ -148,6 +208,92 @@ $nextProject = $project['next_project'] ?? null;
         <p class="text-base sm:text-lg text-[var(--text-dim)] leading-relaxed">
           <?= esc($project['solution']) ?>
         </p>
+      </div>
+    </div>
+
+    <!-- Interactive 3-Tab Engineering & QA Blueprint -->
+    <div class="glass-card p-6 sm:p-10 border border-[var(--acid)]/30 space-y-8" data-blueprint-tabs>
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6">
+        <div>
+          <span class="font-mono text-xs tracking-[0.2em] uppercase text-[var(--acid)]">// INTERACTIVE TECHNICAL DEEP-DIVE</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold uppercase text-white mt-1">ENGINEERING &amp; QA BLUEPRINT</h2>
+        </div>
+
+        <div class="flex flex-wrap gap-2" role="tablist" aria-label="Technical Blueprint Tabs">
+          <button
+            type="button"
+            role="tab"
+            aria-selected="true"
+            data-bp-tab="pipeline"
+            class="px-4 py-2 rounded-full font-mono text-xs tracking-wider uppercase transition-colors bg-[var(--acid)] text-[var(--void)] font-bold"
+          >
+            01 // SYSTEM PIPELINE
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-bp-tab="backend"
+            class="px-4 py-2 rounded-full font-mono text-xs tracking-wider uppercase transition-colors bg-white/5 text-white/80 border border-white/15 hover:border-[var(--acid)]"
+          >
+            02 // SQL &amp; API ARCHITECTURE
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-bp-tab="qa"
+            class="px-4 py-2 rounded-full font-mono text-xs tracking-wider uppercase transition-colors bg-white/5 text-white/80 border border-white/15 hover:border-[var(--acid)]"
+          >
+            03 // QA &amp; TESTING SUITE
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab Panel 1: Visual System Pipeline -->
+      <div data-bp-panel="pipeline" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <?php foreach ($bp['pipeline'] as $node): ?>
+          <div class="p-6 rounded-2xl bg-[#07090F]/90 border border-white/10 hover:border-[var(--acid)]/60 transition-colors space-y-3 relative">
+            <div class="flex items-center justify-between font-mono text-[11px]">
+              <span class="text-[var(--acid)] font-bold">STAGE <?= esc($node['step']) ?></span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-[var(--cyan)] text-[10px]"><?= esc($node['badge']) ?></span>
+            </div>
+            <h3 class="font-display text-lg font-bold uppercase text-white"><?= esc($node['title']) ?></h3>
+            <p class="text-sm text-[var(--text-dim)] leading-relaxed"><?= esc($node['desc']) ?></p>
+          </div>
+        <?php endforeach; ?>
+      </div>
+
+      <!-- Tab Panel 2: Backend, SQL & API Spec -->
+      <div data-bp-panel="backend" class="hidden grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-[#07090F]/90 border border-white/10 space-y-2">
+          <span class="font-mono text-xs uppercase tracking-wider text-[var(--acid)]">01 // DATABASE SCHEMA (SQL)</span>
+          <p class="text-sm sm:text-base text-white/90 leading-relaxed"><?= esc($bp['backend']['schema']) ?></p>
+        </div>
+        <div class="p-6 rounded-2xl bg-[#07090F]/90 border border-white/10 space-y-2">
+          <span class="font-mono text-xs uppercase tracking-wider text-[var(--cyan)]">02 // REST API &amp; ROUTES</span>
+          <p class="text-sm sm:text-base text-white/90 leading-relaxed"><?= esc($bp['backend']['endpoints']) ?></p>
+        </div>
+        <div class="p-6 rounded-2xl bg-[#07090F]/90 border border-white/10 space-y-2">
+          <span class="font-mono text-xs uppercase tracking-wider text-[var(--plasma)]">03 // SECURITY &amp; VALIDATION</span>
+          <p class="text-sm sm:text-base text-white/90 leading-relaxed"><?= esc($bp['backend']['security']) ?></p>
+        </div>
+      </div>
+
+      <!-- Tab Panel 3: QA Test Plan & Verification -->
+      <div data-bp-panel="qa" class="hidden grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-[#07090F]/90 border border-white/10 space-y-2">
+          <span class="font-mono text-xs uppercase tracking-wider text-[var(--acid)]">01 // POSTMAN API TESTING</span>
+          <p class="text-sm sm:text-base text-white/90 leading-relaxed"><?= esc($bp['qa']['postman']) ?></p>
+        </div>
+        <div class="p-6 rounded-2xl bg-[#07090F]/90 border border-white/10 space-y-2">
+          <span class="font-mono text-xs uppercase tracking-wider text-[var(--cyan)]">02 // PHPUNIT AUTOMATION</span>
+          <p class="text-sm sm:text-base text-white/90 leading-relaxed"><?= esc($bp['qa']['phpunit']) ?></p>
+        </div>
+        <div class="p-6 rounded-2xl bg-[#07090F]/90 border border-white/10 space-y-2">
+          <span class="font-mono text-xs uppercase tracking-wider text-[var(--plasma)]">03 // DEBUGGING &amp; LOGS</span>
+          <p class="text-sm sm:text-base text-white/90 leading-relaxed"><?= esc($bp['qa']['debugging']) ?></p>
+        </div>
       </div>
     </div>
 

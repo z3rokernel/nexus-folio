@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05060A"/>
+      <stop offset="60%" stop-color="#0B0E18"/>
+      <stop offset="100%" stop-color="#05060A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#D4FF1F" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#2DE2E6" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#05060A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <rect x="60" y="55" width="1480" height="790" rx="22" fill="none" stroke="#EDEFF5" stroke-opacity="0.14" stroke-width="1.5"/>
+
+  <text x="110" y="120" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700" fill="#D4FF1F" letter-spacing="3">QA ENGINEERING & API AUTOMATION // POSTMAN & PHPUNIT · SYSTEM OVERVIEW</text>
+  <text x="110" y="185" font-family="Syne, sans-serif" font-size="52" font-weight="800" fill="#EDEFF5">API & QA SENTINEL</text>
+  <text x="110" y="230" font-family="Inter, sans-serif" font-size="22" fill="#8A90A6">REST API Validation, Automated Regression & SQL Anomaly Detection</text>
+
+  <!-- Left Architecture Box -->
+  <g transform="translate(110, 285)">
+    <rect width="660" height="440" rx="18" fill="#0B0F1A" stroke="#D4FF1F" stroke-opacity="0.5" stroke-width="1.5"/>
+    <text x="40" y="55" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#D4FF1F">01 // POSTMAN & PHPUNIT TEST SUITES</text>
+    <line x1="40" y1="78" x2="620" y2="78" stroke="#EDEFF5" stroke-opacity="0.1"/>
+    <text x="40" y="135" font-family="Inter, sans-serif" font-size="20" fill="#EDEFF5">• Functional & edge-case REST API testing</text>
+    <text x="40" y="195" font-family="Inter, sans-serif" font-size="20" fill="#EDEFF5">• HTTP status, JSON schema & auth checks</text>
+    <text x="40" y="255" font-family="Inter, sans-serif" font-size="20" fill="#EDEFF5">• Automated CI regression before deploy</text>
+    <rect x="40" y="320" width="580" height="76" rx="12" fill="#121829"/>
+    <text x="64" y="365" font-family="JetBrains Mono, monospace" font-size="14" fill="#D4FF1F">STATUS: VERIFIED IN PRODUCTION // MABDEIRA.DEV</text>
+  </g>
+
+  <!-- Right Architecture Box -->
+  <g transform="translate(830, 285)">
+    <rect width="660" height="440" rx="18" fill="#0B0F1A" stroke="#2DE2E6" stroke-opacity="0.5" stroke-width="1.5"/>
+    <text x="40" y="55" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#2DE2E6">02 // SQL DATA INTEGRITY & BUG TRIAGE</text>
+    <line x1="40" y1="78" x2="620" y2="78" stroke="#EDEFF5" stroke-opacity="0.1"/>
+    <text x="40" y="135" font-family="Inter, sans-serif" font-size="20" fill="#EDEFF5">• PostgreSQL & MySQL constraint verification</text>
+    <text x="40" y="195" font-family="Inter, sans-serif" font-size="20" fill="#EDEFF5">• Custom PHP log parsing & debugging scripts</text>
+    <text x="40" y="255" font-family="Inter, sans-serif" font-size="20" fill="#EDEFF5">• Structured reproduction & QA reports</text>
+    <rect x="40" y="320" width="580" height="76" rx="12" fill="#121829"/>
+    <text x="64" y="365" font-family="JetBrains Mono, monospace" font-size="14" fill="#2DE2E6">MOSTEPHA AMINE BDEIRA // FULL-STACK &amp; QA</text>
+  </g>
+
+  <text x="110" y="795" font-family="JetBrains Mono, monospace" font-size="14" fill="#8A90A6" letter-spacing="2">MABDEIRA.DEV // LYON, FRANCE · PHP · SQL · REST API · QA</text>
+</svg>

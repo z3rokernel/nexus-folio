@@ -194,6 +194,34 @@ function initCaseStudyLightbox(container) {
     });
     cleanups.push(() => d.forEach((inst) => inst.kill()));
   }
+
+  // Interactive 3-Tab Engineering & QA Blueprint
+  const bpWrapper = container.querySelector('[data-blueprint-tabs]');
+  if (bpWrapper) {
+    const tabBtns = Array.from(bpWrapper.querySelectorAll('[data-bp-tab]'));
+    const panels = Array.from(bpWrapper.querySelectorAll('[data-bp-panel]'));
+
+    tabBtns.forEach((btn) => {
+      const onClick = () => {
+        const targetTab = btn.getAttribute('data-bp-tab');
+        tabBtns.forEach((b) => {
+          const active = b === btn;
+          b.setAttribute('aria-selected', active ? 'true' : 'false');
+          b.className = active
+            ? 'px-4 py-2 rounded-full font-mono text-xs tracking-wider uppercase transition-colors bg-[var(--acid)] text-[var(--void)] font-bold'
+            : 'px-4 py-2 rounded-full font-mono text-xs tracking-wider uppercase transition-colors bg-white/5 text-white/80 border border-white/15 hover:border-[var(--acid)]';
+        });
+
+        panels.forEach((p) => {
+          const match = p.getAttribute('data-bp-panel') === targetTab;
+          p.classList.toggle('hidden', !match);
+          p.classList.toggle('grid', match);
+        });
+      };
+      btn.addEventListener('click', onClick);
+      cleanups.push(() => btn.removeEventListener('click', onClick));
+    });
+  }
 }
 
 /* =====================================================================

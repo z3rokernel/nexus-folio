@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05060A"/>
+      <stop offset="60%" stop-color="#0B0E18"/>
+      <stop offset="100%" stop-color="#05060A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#2DE2E6" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#7B5CFF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#05060A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <rect x="60" y="55" width="1480" height="790" rx="22" fill="none" stroke="#EDEFF5" stroke-opacity="0.14" stroke-width="1.5"/>
+
+  <text x="110" y="120" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700" fill="#2DE2E6" letter-spacing="3">MASTER THESIS (LEVEL 7 ENIC-NARIC) // UCBET · QA VALIDATION & METRICS</text>
+  <text x="110" y="185" font-family="Syne, sans-serif" font-size="52" font-weight="800" fill="#EDEFF5">DEEP LEARNING E-LEARNING</text>
+  <text x="110" y="230" font-family="Inter, sans-serif" font-size="22" fill="#8A90A6">AI Course Recommendation Engine & Automated Exercise Generation</text>
+
+  <!-- Left Architecture Box -->
+  <g transform="translate(110, 285)">
+    <rect width="660" height="440" rx="18" fill="#0B0F1A" stroke="#2DE2E6" stroke-opacity="0.5" stroke-width="1.5"/>
+    <text x="40" y="55" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#2DE2E6">01 // NEURAL COLLABORATIVE FILTERING</text>
+    <line x1="40" y1="78" x2="620" y2="78" stroke="#EDEFF5" stroke-opacity="0.1"/>
+    <text x="40" y="135" font-family="Inter, sans-serif" font-size="20" fill="#EDEFF5">• Learner profile & quiz telemetry embeddings</text>
+    <text x="40" y="195" font-family="Inter, sans-serif" font-size="20" fill="#EDEFF5">• Personalized course sequence ranking</text>
+    <text x="40" y="255" font-family="Inter, sans-serif" font-size="20" fill="#EDEFF5">• Real-time mastery score prediction</text>
+    <rect x="40" y="320" width="580" height="76" rx="12" fill="#121829"/>
+    <text x="64" y="365" font-family="JetBrains Mono, monospace" font-size="14" fill="#2DE2E6">STATUS: VERIFIED IN PRODUCTION // MABDEIRA.DEV</text>
+  </g>
+
+  <!-- Right Architecture Box -->
+  <g transform="translate(830, 285)">
+    <rect width="660" height="440" rx="18" fill="#0B0F1A" stroke="#7B5CFF" stroke-opacity="0.5" stroke-width="1.5"/>
+    <text x="40" y="55" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#7B5CFF">02 // AI EXERCISE & QUIZ GENERATOR</text>
+    <line x1="40" y1="78" x2="620" y2="78" stroke="#EDEFF5" stroke-opacity="0.1"/>
+    <text x="40" y="135" font-family="Inter, sans-serif" font-size="20" fill="#EDEFF5">• Dynamic question synthesis by difficulty</text>
+    <text x="40" y="195" font-family="Inter, sans-serif" font-size="20" fill="#EDEFF5">• Automated grading & remediation hints</text>
+    <text x="40" y="255" font-family="Inter, sans-serif" font-size="20" fill="#EDEFF5">• SQL analytics dashboard for instructors</text>
+    <rect x="40" y="320" width="580" height="76" rx="12" fill="#121829"/>
+    <text x="64" y="365" font-family="JetBrains Mono, monospace" font-size="14" fill="#2DE2E6">MOSTEPHA AMINE BDEIRA // FULL-STACK &amp; QA</text>
+  </g>
+
+  <text x="110" y="795" font-family="JetBrains Mono, monospace" font-size="14" fill="#8A90A6" letter-spacing="2">MABDEIRA.DEV // LYON, FRANCE · PHP · SQL · REST API · QA</text>
+</svg>

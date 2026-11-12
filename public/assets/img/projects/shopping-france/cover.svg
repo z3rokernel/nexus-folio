@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05060A"/>
+      <stop offset="50%" stop-color="#0B0F1A"/>
+      <stop offset="100%" stop-color="#06080E"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="72%" cy="38%" r="55%">
+      <stop offset="0%" stop-color="#D4FF1F" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#2DE2E6" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#05060A" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#EDEFF5" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+
+  <!-- Top Telemetry Header -->
+  <text x="80" y="64" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700" fill="#D4FF1F" letter-spacing="3">PRODUCTION CASE STUDY // HTTPS://SHOPPINGFRANCE.STORE</text>
+  <text x="1210" y="64" font-family="JetBrains Mono, monospace" font-size="14" fill="#2DE2E6" letter-spacing="2">CODEIGNITER 4 · TAILWIND · MYSQL · SMS API</text>
+
+  <!-- Desktop Browser Frame (Left/Center) -->
+  <g transform="translate(80, 95)">
+    <rect width="1040" height="680" rx="18" fill="#0B0D14" stroke="#EDEFF5" stroke-opacity="0.18" stroke-width="1.5"/>
+    <!-- Browser Top Bar -->
+    <rect width="1040" height="48" rx="18" fill="#121622"/>
+    <circle cx="28" cy="24" r="6" fill="#FF3B5C"/>
+    <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="6" fill="#D4FF1F"/>
+    <!-- URL Bar -->
+    <rect x="110" y="11" width="560" height="26" rx="6" fill="#07090F" stroke="#EDEFF5" stroke-opacity="0.12"/>
+    <text x="128" y="29" font-family="JetBrains Mono, monospace" font-size="12" fill="#2DE2E6">🔒 https://shoppingfrance.store</text>
+    <text x="840" y="29" font-family="JetBrains Mono, monospace" font-size="11" fill="#D4FF1F">PAIEMENT À LA LIVRAISON (COD)</text>
+
+    <!-- Storefront Announcement Bar -->
+    <rect x="0" y="48" width="1040" height="32" fill="#D4FF1F"/>
+    <text x="270" y="69" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" fill="#05060A" letter-spacing="1.5">⚡ LIVRAISON EXPRESS FRANCE ENTIÈRE · PAIEMENT À LA RÉCEPTION · VÉRIFICATION SMS</text>
+
+    <!-- Storefront Hero Banner -->
+    <rect x="32" y="104" width="610" height="250" rx="14" fill="#131826" stroke="#EDEFF5" stroke-opacity="0.1"/>
+    <rect x="54" y="128" width="175" height="24" rx="12" fill="#D4FF1F" fill-opacity="0.15" stroke="#D4FF1F" stroke-opacity="0.5"/>
+    <text x="68" y="144" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#D4FF1F">OFFRE FLASH -40%</text>
+    <text x="54" y="192" font-family="Syne, Inter, sans-serif" font-size="32" font-weight="800" fill="#EDEFF5">SHOPPING FRANCE</text>
+    <text x="54" y="226" font-family="Syne, Inter, sans-serif" font-size="22" font-weight="700" fill="#2DE2E6">E-COMMERCE HAUTE CONVERSION</text>
+    <text x="54" y="262" font-family="Inter, sans-serif" font-size="14" fill="#8A90A6">Tunnel d'achat optimisé mobile pour campagnes Facebook &amp; Instagram Ads.</text>
+    <text x="54" y="284" font-family="Inter, sans-serif" font-size="14" fill="#8A90A6">Commande directe en 1 page sans friction bancaire + confirmation SMS.</text>
+    <rect x="54" y="304" width="210" height="34" rx="8" fill="#D4FF1F"/>
+    <text x="76" y="326" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" fill="#05060A">COMMANDER MAINTENANT →</text>
+
+    <!-- Product Grid Cards (Bottom Left) -->
+    <!-- Card 1 -->
+    <g transform="translate(32, 376)">
+      <rect width="295" height="272" rx="14" fill="#101420" stroke="#EDEFF5" stroke-opacity="0.12"/>
+      <rect x="16" y="16" width="263" height="125" rx="10" fill="#181F32"/>
+      <circle cx="147" cy="78" r="38" fill="#D4FF1F" fill-opacity="0.18" stroke="#D4FF1F" stroke-width="1.5"/>
+      <text x="28" y="42" font-family="JetBrains Mono, monospace" font-size="10" fill="#2DE2E6">★ 4.9/5 (340 AVIS)</text>
+      <text x="16" y="168" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#EDEFF5">Pack Premium Maison &amp; Tech</text>
+      <text x="16" y="192" font-family="JetBrains Mono, monospace" font-size="12" fill="#8A90A6">Stock vérifié · Expédition 24h</text>
+      <text x="16" y="232" font-family="Syne, sans-serif" font-size="24" font-weight="800" fill="#D4FF1F">49,90 €</text>
+      <text x="115" y="232" font-family="JetBrains Mono, monospace" font-size="13" fill="#8A90A6" text-decoration="line-through">79,90 €</text>
+      <rect x="175" y="210" width="104" height="32" rx="6" fill="#2DE2E6" fill-opacity="0.15" stroke="#2DE2E6"/>
+      <text x="192" y="230" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#2DE2E6">COD DISPO</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(347, 376)">
+      <rect width="295" height="272" rx="14" fill="#101420" stroke="#EDEFF5" stroke-opacity="0.12"/>
+      <rect x="16" y="16" width="263" height="125" rx="10" fill="#181F32"/>
+      <circle cx="147" cy="78" r="38" fill="#7B5CFF" fill-opacity="0.22" stroke="#7B5CFF" stroke-width="1.5"/>
+      <text x="28" y="42" font-family="JetBrains Mono, monospace" font-size="10" fill="#D4FF1F">🔥 MEILLEURE VENTE</text>
+      <text x="16" y="168" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#EDEFF5">Kit Pro Édition Limitée</text>
+      <text x="16" y="192" font-family="JetBrains Mono, monospace" font-size="12" fill="#8A90A6">Garantie 2 ans · Livraison Suivie</text>
+      <text x="16" y="232" font-family="Syne, sans-serif" font-size="24" font-weight="800" fill="#D4FF1F">64,00 €</text>
+      <rect x="175" y="210" width="104" height="32" rx="6" fill="#D4FF1F" fill-opacity="0.15" stroke="#D4FF1F"/>
+      <text x="192" y="230" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#D4FF1F">EN STOCK</text>
+    </g>
+
+    <!-- Right Column inside Browser: 1-Step Cash-on-Delivery Checkout Module -->
+    <g transform="translate(664, 104)">
+      <rect width="344" height="544" rx="14" fill="#111624" stroke="#D4FF1F" stroke-opacity="0.55" stroke-width="1.5"/>
+      <text x="24" y="38" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" fill="#D4FF1F">⚡ COMMANDE EXPRESS (COD)</text>
+      <text x="24" y="62" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#EDEFF5">Paiement à la Livraison</text>
+      <line x1="24" y1="78" x2="320" y2="78" stroke="#EDEFF5" stroke-opacity="0.1"/>
+
+      <!-- Input 1 -->
+      <text x="24" y="106" font-family="JetBrains Mono, monospace" font-size="11" fill="#8A90A6">01 // NOM COMPLET *</text>
+      <rect x="24" y="116" width="296" height="38" rx="8" fill="#07090F" stroke="#EDEFF5" stroke-opacity="0.18"/>
+      <text x="38" y="140" font-family="Inter, sans-serif" font-size="13" fill="#EDEFF5">Jean-Luc Moreau</text>
+
+      <!-- Input 2 -->
+      <text x="24" y="180" font-family="JetBrains Mono, monospace" font-size="11" fill="#8A90A6">02 // TÉLÉPHONE MOBILE (SMS API) *</text>
+      <rect x="24" y="190" width="296" height="38" rx="8" fill="#07090F" stroke="#2DE2E6" stroke-opacity="0.6"/>
+      <text x="38" y="214" font-family="JetBrains Mono, monospace" font-size="13" fill="#2DE2E6">+33 6 42 88 19 04   ✓ VALIDÉ</text>
+
+      <!-- Input 3 -->
+      <text x="24" y="254" font-family="JetBrains Mono, monospace" font-size="11" fill="#8A90A6">03 // ADRESSE &amp; CODE POSTAL *</text>
+      <rect x="24" y="264" width="296" height="38" rx="8" fill="#07090F" stroke="#EDEFF5" stroke-opacity="0.18"/>
+      <text x="38" y="288" font-family="Inter, sans-serif" font-size="13" fill="#EDEFF5">14 Rue de la République, 69002 Lyon</text>
+
+      <!-- Order Summary Box -->
+      <rect x="24" y="324" width="296" height="96" rx="10" fill="#080B12" stroke="#EDEFF5" stroke-opacity="0.1"/>
+      <text x="40" y="350" font-family="JetBrains Mono, monospace" font-size="12" fill="#8A90A6">Sous-total article</text>
+      <text x="245" y="350" font-family="JetBrains Mono, monospace" font-size="12" fill="#EDEFF5">49,90 €</text>
+      <text x="40" y="374" font-family="JetBrains Mono, monospace" font-size="12" fill="#8A90A6">Livraison COD</text>
+      <text x="235" y="374" font-family="JetBrains Mono, monospace" font-size="12" fill="#2DE2E6">GRATUITE</text>
+      <text x="40" y="402" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#EDEFF5">TOTAL À PAYER AU LIVREUR</text>
+      <text x="240" y="402" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#D4FF1F">49,90 €</text>
+
+      <!-- Submit CTA -->
+      <rect x="24" y="438" width="296" height="48" rx="10" fill="#D4FF1F"/>
+      <text x="52" y="467" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#05060A">VALIDER LA COMMANDE (SMS)</text>
+
+      <!-- API Status Footer -->
+      <text x="36" y="516" font-family="JetBrains Mono, monospace" font-size="11" fill="#2DE2E6">● SMS &amp; EMAIL TRANSACTIONNEL ACTIFS</text>
+    </g>
+  </g>
+
+  <!-- Right Floating Mobile Device + API Telemetry Card -->
+  <g transform="translate(1160, 125)">
+    <rect width="360" height="650" rx="34" fill="#0B0E17" stroke="#2DE2E6" stroke-opacity="0.5" stroke-width="2"/>
+    <rect x="125" y="14" width="110" height="18" rx="9" fill="#05060A"/>
+
+    <!-- Mobile Notification Banner (SMS API Proof) -->
+    <rect x="22" y="52" width="316" height="92" rx="14" fill="#141C2E" stroke="#D4FF1F" stroke-opacity="0.7"/>
+    <text x="40" y="78" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#D4FF1F">💬 SMS API GATEWAY // INSTANTANÉ</text>
+    <text x="40" y="102" font-family="Inter, sans-serif" font-size="13" fill="#EDEFF5">[Shopping France] Bonjour Jean-Luc,</text>
+    <text x="40" y="122" font-family="Inter, sans-serif" font-size="12" fill="#8A90A6">Commande #SF-8492 confirmée (49,90€ COD).</text>
+
+    <!-- Transactional Email Proof -->
+    <rect x="22" y="162" width="316" height="92" rx="14" fill="#111624" stroke="#2DE2E6" stroke-opacity="0.5"/>
+    <text x="40" y="188" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#2DE2E6">✉️ TRANSACTIONAL EMAIL API // 200 OK</text>
+    <text x="40" y="212" font-family="Inter, sans-serif" font-size="13" fill="#EDEFF5">Récapitulatif &amp; Lien de Suivi Envoyés</text>
+    <text x="40" y="232" font-family="JetBrains Mono, monospace" font-size="11" fill="#8A90A6">SMTP / REST Webhook · Latence 140ms</text>
+
+    <!-- Backend Architecture Telemetry inside Mobile Frame -->
+    <rect x="22" y="274" width="316" height="348" rx="16" fill="#070A10" stroke="#EDEFF5" stroke-opacity="0.14"/>
+    <text x="42" y="308" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" fill="#D4FF1F">// BACKEND &amp; QA TELEMETRY</text>
+
+    <text x="42" y="344" font-family="JetBrains Mono, monospace" font-size="11" fill="#8A90A6">FRAMEWORK</text>
+    <text x="42" y="364" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#EDEFF5">CodeIgniter 4 (MVC Architecture)</text>
+
+    <text x="42" y="404" font-family="JetBrains Mono, monospace" font-size="11" fill="#8A90A6">DATABASE &amp; INTEGRITY</text>
+    <text x="42" y="424" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#EDEFF5">MySQL 8 · ACID Orders &amp; Stock</text>
+
+    <text x="42" y="464" font-family="JetBrains Mono, monospace" font-size="11" fill="#8A90A6">ACQUISITION TRAFFIC</text>
+    <text x="42" y="484" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#2DE2E6">Facebook Ads &amp; Instagram Reels</text>
+
+    <text x="42" y="524" font-family="JetBrains Mono, monospace" font-size="11" fill="#8A90A6">QA &amp; API VERIFICATION</text>
+    <text x="42" y="544" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#D4FF1F">Postman + PHPUnit · 99.8% Uptime</text>
+
+    <rect x="42" y="568" width="276" height="34" rx="8" fill="#D4FF1F" fill-opacity="0.12" stroke="#D4FF1F" stroke-opacity="0.4"/>
+    <text x="64" y="590" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#D4FF1F">● PRODUCTION READY // LYON, FR</text>
+  </g>
+
+  <!-- Bottom Caption Bar -->
+  <text x="80" y="845" font-family="JetBrains Mono, monospace" font-size="15" fill="#8A90A6" letter-spacing="2">MOSTEPHA AMINE BDEIRA // FULL-STACK DEVELOPER &amp; QA ENGINEER · MABDEIRA.DEV</text>
+</svg>
