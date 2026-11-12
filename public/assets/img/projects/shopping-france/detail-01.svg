@@ -19,7 +19,7 @@
   <!-- Arrow 1->2 -->
   <path d="M 345 440 L 395 440" stroke="#D4FF1F" stroke-width="3"/>
 
-  <!-- Step 2: CodeIgniter 4 Controller & Validation -->
+  <!-- Step 2: CodeIgniter 4 Controller &amp; Validation -->
   <g transform="translate(400, 180)">
     <rect width="270" height="520" rx="18" fill="#0C101C" stroke="#D4FF1F" stroke-width="2"/>
     <text x="28" y="48" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#D4FF1F">STAGE 02 // BACKEND</text>
@@ -56,7 +56,7 @@
   <!-- Arrow 3->4 -->
   <path d="M 995 440 L 1045 440" stroke="#D4FF1F" stroke-width="3"/>
 
-  <!-- Step 4: Third-Party SMS & Email REST APIs -->
+  <!-- Step 4: Third-Party SMS &amp; Email REST APIs -->
   <g transform="translate(1050, 180)">
     <rect width="470" height="520" rx="18" fill="#0C101C" stroke="#D4FF1F" stroke-width="2"/>
     <text x="28" y="48" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#D4FF1F">STAGE 04 // EXTERNAL REST APIS &amp; QA</text>

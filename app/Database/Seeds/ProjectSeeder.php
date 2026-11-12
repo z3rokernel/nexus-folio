@@ -32,7 +32,7 @@ class ProjectSeeder extends Seeder
                     'Full COD order pipeline',
                 ]),
                 'body'        => 'Shopping France combines a fast CodeIgniter 4 backend with frictionless mobile checkout and automated customer communication.',
-                'cover_image' => '/assets/img/projects/aether-engine/cover.svg',
+                'cover_image' => '/assets/img/projects/shopping-france/cover.svg',
                 'cover_video' => '',
                 'accent'      => '#D4FF1F',
                 'tags'        => json_encode(['web', 'mobile']),
@@ -63,7 +63,7 @@ class ProjectSeeder extends Seeder
                     'REST API + SQL architecture',
                 ]),
                 'body'        => 'Developed as the capstone Master’s research project in Intelligent Computer Systems ("Towards a Deep Learning-Based E-learning Platform").',
-                'cover_image' => '/assets/img/projects/synapse-rag-os/cover.svg',
+                'cover_image' => '/assets/img/projects/deep-learning-elearning/cover.svg',
                 'cover_video' => '',
                 'accent'      => '#7B5CFF',
                 'tags'        => json_encode(['ai', 'web']),
@@ -94,7 +94,7 @@ class ProjectSeeder extends Seeder
                     '99.9% Linux server uptime',
                 ]),
                 'body'        => 'Battle-tested across 8+ years of freelance consulting with SMBs, e-commerce merchants, and non-profit organizations.',
-                'cover_image' => '/assets/img/projects/kronos-neural-hud/cover.svg',
+                'cover_image' => '/assets/img/projects/m4b-enterprise-suite/cover.svg',
                 'cover_video' => '',
                 'accent'      => '#2DE2E6',
                 'tags'        => json_encode(['web', 'open-source']),
@@ -125,7 +125,7 @@ class ProjectSeeder extends Seeder
                     'Zero-downtime releases',
                 ]),
                 'body'        => 'Built from hands-on QA and full-stack debugging experience to ensure every API integration ships with confidence.',
-                'cover_image' => '/assets/img/projects/hyperion-synth/cover.svg',
+                'cover_image' => '/assets/img/projects/api-qa-sentinel/cover.svg',
                 'cover_video' => '',
                 'accent'      => '#D4FF1F',
                 'tags'        => json_encode(['web', 'open-source', 'ai']),
@@ -156,7 +156,7 @@ class ProjectSeeder extends Seeder
                     'Full reduced-motion parity',
                 ]),
                 'body'        => 'A showcase of how modern PHP backend engineering and high-craft WebGL frontend motion can coexist in a single fast application.',
-                'cover_image' => '/assets/img/projects/void-commerce/cover.svg',
+                'cover_image' => '/assets/img/projects/aether-engine/cover.svg',
                 'cover_video' => '',
                 'accent'      => '#FF3B5C',
                 'tags'        => json_encode(['webgl', 'web', 'open-source']),
@@ -187,7 +187,7 @@ class ProjectSeeder extends Seeder
                     'Multilingual FR / EN / AR',
                 ]),
                 'body'        => 'Engineered for measurable business growth—combining clean SQL indexing, server-side caching, and semantic web standards.',
-                'cover_image' => '/assets/img/projects/prism-shader-kit/cover.svg',
+                'cover_image' => '/assets/img/projects/seo-cms-accelerator/cover.svg',
                 'cover_video' => '',
                 'accent'      => '#2DE2E6',
                 'tags'        => json_encode(['web', 'mobile']),
@@ -205,38 +205,29 @@ class ProjectSeeder extends Seeder
         $this->db->table('projects')->insertBatch($projects);
 
         $inserted = $this->db->table('projects')->get()->getResultArray();
-        $coverFolders = [
-            'shopping-france'         => 'aether-engine',
-            'deep-learning-elearning' => 'synapse-rag-os',
-            'm4b-enterprise-suite'    => 'kronos-neural-hud',
-            'api-qa-sentinel'         => 'hyperion-synth',
-            'aether-engine'           => 'void-commerce',
-            'seo-cms-accelerator'     => 'prism-shader-kit',
-        ];
 
         $mediaRows = [];
         foreach ($inserted as $proj) {
             $slug = $proj['slug'];
-            $folder = $coverFolders[$slug] ?? 'aether-engine';
             $mediaRows[] = [
                 'project_id' => $proj['id'],
                 'type'       => 'image',
-                'path'       => "/assets/img/projects/{$folder}/cover.svg",
+                'path'       => "/assets/img/projects/{$slug}/cover.svg",
                 'caption'    => "{$proj['title']} — Primary Architecture & Production Interface",
                 'sort_order' => 1,
             ];
             $mediaRows[] = [
                 'project_id' => $proj['id'],
                 'type'       => 'image',
-                'path'       => "/assets/img/projects/{$folder}/detail-01.svg",
-                'caption'    => "{$proj['title']} — Backend SQL Schema, REST API & QA Telemetry",
+                'path'       => "/assets/img/projects/{$slug}/detail-01.svg",
+                'caption'    => "{$proj['title']} — Backend SQL Schema, REST API & System Dataflow",
                 'sort_order' => 2,
             ];
             $mediaRows[] = [
                 'project_id' => $proj['id'],
                 'type'       => 'image',
-                'path'       => "/assets/img/projects/{$folder}/detail-02.svg",
-                'caption'    => "{$proj['title']} — Responsive Mobile UI & Performance Breakdown",
+                'path'       => "/assets/img/projects/{$slug}/detail-02.svg",
+                'caption'    => "{$proj['title']} — Automated QA Testing, Postman & Performance Metrics",
                 'sort_order' => 3,
             ];
         }
