@@ -9,3 +9,4 @@ void main() {
   float ring = smoothstep(0.18, 0.0, d) * (0.5 + 0.5 * sin(uTime * 3.0));
   gl_FragColor = vec4(uAccent * ring, ring * 0.65);
 }
+

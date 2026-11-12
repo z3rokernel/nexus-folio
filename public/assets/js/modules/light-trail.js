@@ -96,3 +96,4 @@ export function destroyLightTrail() {
   cleanups.forEach((fn) => fn());
   cleanups = [];
 }
+

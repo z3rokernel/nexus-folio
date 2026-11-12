@@ -62,3 +62,4 @@ export function destroyMagnetic() {
   cleanups.forEach((fn) => fn());
   cleanups = [];
 }
+

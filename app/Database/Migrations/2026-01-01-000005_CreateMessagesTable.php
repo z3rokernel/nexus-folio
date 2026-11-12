@@ -55,3 +55,4 @@ class CreateMessagesTable extends Migration
         $this->forge->dropTable('messages', true);
     }
 }
+

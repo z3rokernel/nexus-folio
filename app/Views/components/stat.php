@@ -17,3 +17,4 @@ $label  = $label ?? 'METRIC';
     // <?= esc($label) ?>
   </p>
 </div>
+

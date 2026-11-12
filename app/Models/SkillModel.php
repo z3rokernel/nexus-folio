@@ -46,3 +46,4 @@ class SkillModel extends Model
         return $grouped;
     }
 }
+

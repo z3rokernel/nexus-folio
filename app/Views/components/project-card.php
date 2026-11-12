@@ -87,3 +87,4 @@ $stack = array_slice($project['stack'] ?? [], 0, 4);
     </div>
   </div>
 </article>
+

@@ -5,8 +5,8 @@
  * @var string $namespace
  * @var array<int, array<string, mixed>> $paletteProjects
  */
-$pageTitle       = $meta['title'] ?? 'NEXUS-FOLIO // Creative AI & WebGL Portfolio';
-$pageDescription = $meta['description'] ?? 'Cinematic WebGL & Full-Stack Portfolio of Mostepha Amine BDEIR.';
+$pageTitle       = $meta['title'] ?? 'Mostepha Amine Bdeira // Full-Stack Web Developer (mabdeira.dev)';
+$pageDescription = $meta['description'] ?? 'Full-Stack Web Developer (PHP, CodeIgniter 4, Laravel, SQL, REST APIs, QA) in Lyon, France.';
 $pageCanonical   = $meta['canonical'] ?? current_url();
 $pageOgType      = $meta['og_type'] ?? 'website';
 $pageOgImage     = $meta['og_image'] ?? base_url('assets/img/projects/aether-engine/cover.svg');
@@ -38,12 +38,18 @@ $currentNamespace = $namespace ?? 'home';
   <?= json_encode([
       '@context'    => 'https://schema.org',
       '@type'       => $currentNamespace === 'project' ? 'CreativeWork' : 'Person',
-      'name'        => $site['name'] ?? 'Mostepha Amine BDEIR',
-      'url'         => base_url('/'),
-      'jobTitle'    => 'Principal Creative Technologist & Full-Stack Architect',
+      'name'        => $site['name'] ?? 'Mostepha Amine Bdeira',
+      'url'         => 'https://mabdeira.dev',
+      'email'       => $site['email'] ?? 'contact@mabdeira.dev',
+      'telephone'   => $site['phone'] ?? '+33 6 15 21 88 14',
+      'jobTitle'    => 'Full-Stack Web Developer & QA Specialist',
       'address'     => [
           '@type'           => 'PostalAddress',
-          'addressLocality' => $site['city'] ?? 'Paris, France',
+          'addressLocality' => $site['city'] ?? 'Lyon, France',
+      ],
+      'sameAs'      => [
+          'https://github.com/z3rokernel',
+          'https://linkedin.com/in/m4b007',
       ],
       'description' => $pageDescription,
   ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>
@@ -174,3 +180,4 @@ $currentNamespace = $namespace ?? 'home';
   <script type="module" src="<?= base_url('assets/js/main.js') ?>"></script>
 </body>
 </html>
+

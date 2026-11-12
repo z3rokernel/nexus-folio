@@ -259,3 +259,4 @@ $nextProject = $project['next_project'] ?? null;
 </article>
 
 <?= $this->endSection() ?>
+

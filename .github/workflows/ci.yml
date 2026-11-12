@@ -15,3 +15,4 @@ jobs:
       - run: npm ci && npm run build
       - run: cp .env.example .env && php spark migrate --all && php spark db:seed DatabaseSeeder
       - run: vendor/bin/phpunit
+

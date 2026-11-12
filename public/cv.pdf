@@ -12,17 +12,23 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 5 0 obj
-<< /Length 168 >>
+<< /Length 420 >>
 stream
 BT
 /F1 18 Tf
-50 720 Td
-(MOSTEPHA AMINE BDEIR - NEXUS-FOLIO CV) Tj
+50 730 Td
+(BDEIRA MOSTEPHA AMINE) Tj
 /F1 11 Tf
-0 -32 Td
-(Principal Full-Stack Developer, Creative Technologist & AI Builder) Tj
 0 -22 Td
-(Stack: PHP 8.2+, CodeIgniter 4, Three.js, GLSL, GSAP, Tailwind CSS) Tj
+(Developpeur Web Full-Stack | Testeur QA | SQL, API REST) Tj
+0 -18 Td
+(Lyon, France | 06 15 21 88 14 | contact@mabdeira.dev | bdeiramostephamine@pm.me) Tj
+0 -18 Td
+(linkedin.com/in/m4b007 | github.com/z3rokernel | https://mabdeira.dev) Tj
+0 -28 Td
+(8+ ans d experience en freelance | 30+ projets livres | Master Systemes Informatiques Intelligents) Tj
+0 -22 Td
+(Stack: PHP, CodeIgniter 4, Laravel, MySQL, PostgreSQL, Tailwind CSS, JS, Postman, PHPUnit) Tj
 ET
 endstream
 endobj
@@ -37,5 +43,5 @@ xref
 trailer
 << /Size 6 /Root 1 0 R >>
 startxref
-522
+775
 %%EOF

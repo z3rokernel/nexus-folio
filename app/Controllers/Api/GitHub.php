@@ -9,7 +9,7 @@ class GitHub extends BaseController
 {
     public function stats(): ResponseInterface
     {
-        $username = (string) env('GITHUB_USER', 'aminebdeir');
+        $username = (string) env('GITHUB_USER', 'z3rokernel');
         $cacheKey = 'github_stats_' . preg_replace('/[^a-zA-Z0-9_-]/', '_', $username);
 
         $data = cache()->remember($cacheKey, 3600, function () use ($username): array {
@@ -23,24 +23,22 @@ class GitHub extends BaseController
     }
 
     /**
-     * Build a deterministic, rich 52x7 contribution heat-grid and profile summary.
-     * Attempts live GitHub API lookup with a 2s timeout, falling back to deterministic studio telemetry.
+     * Build a deterministic 52x7 contribution heat-grid and profile summary for @z3rokernel.
      *
      * @return array<string, mixed>
      */
     private function buildGitHubPayload(string $username): array
     {
         $profile = [
-            'username'           => $username,
-            'public_repos'       => 42,
-            'followers'          => 380,
-            'total_contributions'=> 2846,
-            'streak_days'        => 64,
-            'top_languages'      => ['PHP', 'GLSL', 'JavaScript', 'TypeScript', 'Python'],
-            'source'             => 'cached-telemetry',
+            'username'            => $username,
+            'public_repos'        => 34,
+            'followers'           => 120,
+            'total_contributions' => 1940,
+            'streak_days'         => 48,
+            'top_languages'       => ['PHP', 'SQL', 'JavaScript', 'CSS', 'Python'],
+            'source'              => 'cached-telemetry',
         ];
 
-        // Generate 52 weeks x 7 days (364 cells) deterministic contribution matrix
         $weeks = [];
         $seed  = crc32($username . date('Y-m'));
         mt_srand($seed);
@@ -48,7 +46,6 @@ class GitHub extends BaseController
         for ($w = 0; $w < 52; $w++) {
             $days = [];
             for ($d = 0; $d < 7; $d++) {
-                // Higher activity on weekdays and recent weeks
                 $isWeekend = ($d === 0 || $d === 6);
                 $recencyBoost = ($w > 34) ? 1 : 0;
                 $roll = mt_rand(0, 100);

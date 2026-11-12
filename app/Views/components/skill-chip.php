@@ -18,3 +18,4 @@ $level    = $level ?? 90;
   <span><?= esc($name) ?></span>
   <span class="text-[10px] text-[var(--text-dim)]"><?= esc((string) $level) ?>%</span>
 </span>
+

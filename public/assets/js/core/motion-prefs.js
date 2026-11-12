@@ -72,3 +72,4 @@ if (typeof window !== 'undefined') {
     document.body.classList.toggle('reduced-motion', initial);
   }
 }
+

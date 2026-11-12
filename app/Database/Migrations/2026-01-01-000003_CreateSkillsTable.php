@@ -49,3 +49,4 @@ class CreateSkillsTable extends Migration
         $this->forge->dropTable('skills', true);
     }
 }
+

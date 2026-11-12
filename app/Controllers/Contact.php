@@ -12,8 +12,8 @@ class Contact extends BaseController
         $data = $this->withSiteContext([
             'namespace' => 'contact',
             'meta'      => [
-                'title'       => 'INITIATE TRANSMISSION // Contact — NEXUS-FOLIO',
-                'description' => 'Start a project or technical collaboration with Mostepha Amine BDEIR.',
+                'title'       => 'Contact // Mostepha Amine Bdeira (contact@mabdeira.dev)',
+                'description' => 'Get in touch with Mostepha Amine Bdeira in Lyon, France for Full-Stack PHP (Laravel, CodeIgniter 4), SQL, REST API, and QA projects.',
                 'canonical'   => base_url('contact'),
                 'og_type'     => 'website',
             ],
@@ -27,7 +27,6 @@ class Contact extends BaseController
         $wantsJson = str_contains($this->request->getHeaderLine('Accept'), 'application/json')
             || $this->request->isAJAX();
 
-        // Explicit controller-level honeypot check in addition to CI4 Honeypot filter
         $honeypotValue = $this->request->getPost('honeypot') ?? $this->request->getPost('website_url');
         if (! empty($honeypotValue)) {
             if ($wantsJson) {
@@ -52,12 +51,12 @@ class Contact extends BaseController
                 'min_length' => 'Name must be at least 2 characters.',
             ],
             'email' => [
-                'required'    => 'RETURN FREQUENCY REQUIRED // Please provide an email address.',
-                'valid_email' => 'Invalid email coordinate format.',
+                'required'    => 'EMAIL REQUIRED // Please provide your email address.',
+                'valid_email' => 'Invalid email format.',
             ],
             'message' => [
-                'required'   => 'PAYLOAD EMPTY // Please describe your project or inquiry.',
-                'min_length' => 'Transmission payload must be at least 20 characters.',
+                'required'   => 'MESSAGE EMPTY // Please describe your project or opportunity.',
+                'min_length' => 'Message must be at least 20 characters.',
             ],
         ];
 
@@ -88,18 +87,17 @@ class Contact extends BaseController
         $messageModel = new MessageModel();
         $messageId    = $messageModel->insert($payload);
 
-        // Attempt email dispatch if SMTP host is configured; gracefully log otherwise
         $smtpHost = env('email.SMTPHost', '');
         if (! empty($smtpHost)) {
             try {
                 $emailService = \Config\Services::email();
                 $emailService->setFrom(
-                    (string) env('email.fromEmail', 'noreply@nexus-folio.dev'),
-                    (string) env('email.fromName', 'NEXUS-FOLIO Transmission')
+                    (string) env('email.fromEmail', 'noreply@mabdeira.dev'),
+                    (string) env('email.fromName', 'Mostepha Amine Bdeira (mabdeira.dev)')
                 );
-                $emailService->setTo((string) env('CONTACT_TO', 'contact@nexus-folio.dev'));
+                $emailService->setTo((string) env('CONTACT_TO', 'contact@mabdeira.dev'));
                 $emailService->setReplyTo($payload['email'], $payload['name']);
-                $emailService->setSubject('[NEXUS-FOLIO] New Transmission from ' . $payload['name']);
+                $emailService->setSubject('[mabdeira.dev] New Message from ' . $payload['name']);
                 $emailService->setMessage(
                     "Sender: {$payload['name']} <{$payload['email']}>\n" .
                     "IP: {$payload['ip']}\n\n" .
@@ -116,13 +114,13 @@ class Contact extends BaseController
                 ->setStatusCode(200)
                 ->setJSON([
                     'status'        => 'success',
-                    'transmission'  => 'TX-' . str_pad((string) $messageId, 5, '0', STR_PAD_LEFT),
-                    'message'       => 'TRANSMISSION SENT // Signal locked. Expect response within 24h.',
+                    'transmission'  => 'MAB-' . str_pad((string) $messageId, 5, '0', STR_PAD_LEFT),
+                    'message'       => 'MESSAGE SENT // Thank you! I will reply from contact@mabdeira.dev within 24h.',
                     'csrfHash'      => csrf_hash(),
                 ]);
         }
 
         return redirect()->to(route_to('contact'))
-            ->with('success', 'TRANSMISSION SENT // Signal locked. Expect response within 24h.');
+            ->with('success', 'MESSAGE SENT // Thank you! I will reply from contact@mabdeira.dev within 24h.');
     }
 }

@@ -125,3 +125,4 @@ export function navigateToUrl(url) {
     window.location.href = url;
   }
 }
+

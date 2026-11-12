@@ -71,3 +71,4 @@ export function destroyLenis() {
     lenisInstance = null;
   }
 }
+

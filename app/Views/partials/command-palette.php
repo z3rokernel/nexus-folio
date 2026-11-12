@@ -175,7 +175,8 @@
     <!-- Footer Help Bar -->
     <div class="flex items-center justify-between px-5 py-3 border-t border-white/10 bg-[#05060A]/90 font-mono text-[10px] tracking-[0.15em] uppercase text-[var(--text-dim)]">
       <span>↑↓ NAVIGATE · ↵ SELECT · ESC CLOSE</span>
-      <span class="text-[var(--acid)]">NEXUS COMMAND OS v4.2</span>
+      <span class="text-[var(--acid)]">MABDEIRA.DEV // COMMAND OS</span>
     </div>
   </div>
 </div>
+

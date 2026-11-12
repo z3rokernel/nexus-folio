@@ -6,10 +6,10 @@
  * @var array<int, array<string, mixed>> $paletteProjects
  */
 $navItems = [
-    ['index' => '01', 'label' => 'CONTROL ROOM', 'sub' => 'Home & Shader Stage',      'href' => base_url('/'),        'img' => '/assets/img/projects/aether-engine/cover.svg'],
-    ['index' => '02', 'label' => 'WORK ARCHIVE', 'sub' => 'Selected Scenes & Lab',    'href' => base_url('work'),     'img' => '/assets/img/projects/kronos-neural-hud/cover.svg'],
-    ['index' => '03', 'label' => 'SYSTEM ABOUT', 'sub' => 'Terminal, Bio & Timeline', 'href' => base_url('about'),    'img' => '/assets/img/projects/synapse-rag-os/cover.svg'],
-    ['index' => '04', 'label' => 'TRANSMISSION', 'sub' => 'Initiate Project Contact', 'href' => base_url('contact'),  'img' => '/assets/img/projects/hyperion-synth/cover.svg'],
+    ['index' => '01', 'label' => 'CONTROL ROOM', 'sub' => 'Home & Portfolio Stage',   'href' => base_url('/'),        'img' => '/assets/img/projects/shopping-france/cover.svg'],
+    ['index' => '02', 'label' => 'WORK ARCHIVE', 'sub' => 'Selected Projects & QA',   'href' => base_url('work'),     'img' => '/assets/img/projects/deep-learning-elearning/cover.svg'],
+    ['index' => '03', 'label' => 'ABOUT ME',     'sub' => 'Terminal, Bio & Timeline', 'href' => base_url('about'),    'img' => '/assets/img/projects/m4b-enterprise-suite/cover.svg'],
+    ['index' => '04', 'label' => 'CONTACT',      'sub' => 'Direct Email & Inquiry',   'href' => base_url('contact'),  'img' => '/assets/img/projects/api-qa-sentinel/cover.svg'],
 ];
 ?>
 <div
@@ -61,7 +61,7 @@ $navItems = [
         <div class="aspect-video rounded-xl overflow-hidden bg-[#0B0D14] mb-3 relative">
           <img
             id="menu-preview-img"
-            src="<?= base_url('assets/img/projects/aether-engine/cover.svg') ?>"
+            src="<?= base_url('assets/img/projects/shopping-france/cover.svg') ?>"
             alt="Navigation Scene Preview"
             width="640"
             height="360"
@@ -106,10 +106,11 @@ $navItems = [
       <span><?= esc($site['availability'] ?? 'Available for select projects') ?></span>
     </div>
     <div class="flex items-center gap-6">
-      <button type="button" data-copy-email="<?= esc($site['email'] ?? 'contact@nexus-folio.dev') ?>" class="hover:text-[var(--acid)] transition-colors">
-        <?= esc($site['email'] ?? 'contact@nexus-folio.dev') ?> [COPY]
+      <button type="button" data-copy-email="<?= esc($site['email'] ?? 'contact@mabdeira.dev') ?>" class="hover:text-[var(--acid)] transition-colors">
+        <?= esc($site['email'] ?? 'contact@mabdeira.dev') ?> [COPY]
       </button>
       <a href="<?= base_url('cv.pdf') ?>" target="_blank" rel="noopener" class="text-[var(--acid)] hover:underline">DOWNLOAD CV.PDF</a>
     </div>
   </div>
 </div>
+

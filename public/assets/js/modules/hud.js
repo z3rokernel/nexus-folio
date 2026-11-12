@@ -212,3 +212,4 @@ export function destroyHudPage() {
   sceneTriggers.forEach((st) => st.kill());
   sceneTriggers = [];
 }
+

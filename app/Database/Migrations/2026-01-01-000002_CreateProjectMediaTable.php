@@ -51,3 +51,4 @@ class CreateProjectMediaTable extends Migration
         $this->forge->dropTable('project_media', true);
     }
 }
+

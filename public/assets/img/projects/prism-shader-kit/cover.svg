@@ -18,13 +18,11 @@
     </pattern>
   </defs>
 
-  <!-- Base Void -->
   <rect width="1920" height="1080" fill="#05060A"/>
   <rect width="1920" height="1080" fill="url(#glowA_06_cover)"/>
   <rect width="1920" height="1080" fill="url(#glowB_06_cover)"/>
   <rect width="1920" height="1080" fill="url(#grid_06)"/>
 
-  <!-- Geometric Orbit & Wireframe Waves -->
   <g stroke="#2DE2E6" stroke-opacity="0.28" fill="none" stroke-width="1.5">
     <circle cx="1180" cy="520" r="340"/>
     <circle cx="1180" cy="520" r="240" stroke-dasharray="8 8"/>
@@ -35,39 +33,34 @@
     <line x1="1180" y1="120" x2="1180" y2="920" stroke-opacity="0.2"/>
   </g>
 
-  <!-- HUD Viewport Frame -->
   <rect x="80" y="80" width="1760" height="920" rx="24" fill="none" stroke="#EDEFF5" stroke-opacity="0.12" stroke-width="1.5"/>
 
-  <!-- Top Telemetry Bar -->
   <g font-family="JetBrains Mono, monospace" font-size="18" fill="#8A90A6" letter-spacing="3">
-    <text x="130" y="140" fill="#2DE2E6">NXS // SCENE 06</text>
-    <text x="420" y="140">PRIMARY CONTROL ROOM // SCENE 06</text>
-    <text x="1560" y="140" fill="#EDEFF5">2024 // OPEN SOURCE</text>
+    <text x="130" y="140" fill="#2DE2E6">MAB // SCENE 06</text>
+    <text x="420" y="140">PRODUCTION ARCHITECTURE // SCENE 06</text>
+    <text x="1480" y="140" fill="#EDEFF5">2024 // SMB &amp; E-COMMERCE CLIENTS</text>
   </g>
   <line x1="80" y1="175" x2="1840" y2="175" stroke="#EDEFF5" stroke-opacity="0.08"/>
 
-  <!-- Left Control Card -->
   <rect x="130" y="240" width="680" height="540" rx="20" fill="url(#panelGrad_06)" stroke="#2DE2E6" stroke-opacity="0.35" stroke-width="1.5"/>
-  <text x="180" y="315" font-family="JetBrains Mono, monospace" font-size="16" fill="#2DE2E6" letter-spacing="4">// ACTIVE MODULE_06</text>
-  <text x="180" y="395" font-family="Unbounded, Syne, sans-serif" font-weight="800" font-size="54" fill="#EDEFF5" letter-spacing="-1">PRISM GLSL KIT</text>
-  <text x="180" y="445" font-family="Inter Tight, sans-serif" font-size="22" fill="#8A90A6">MODULAR GLSL POST-PROCESSING SUITE</text>
+  <text x="180" y="315" font-family="JetBrains Mono, monospace" font-size="16" fill="#2DE2E6" letter-spacing="4">// CASE STUDY_06</text>
+  <text x="180" y="395" font-family="Unbounded, Syne, sans-serif" font-weight="800" font-size="48" fill="#EDEFF5" letter-spacing="-1">SEO &amp; CMS ENGINE</text>
+  <text x="180" y="445" font-family="Inter Tight, sans-serif" font-size="21" fill="#8A90A6">TECHNICAL SEO &amp; MULTILINGUAL CMS SUITE</text>
 
-  <!-- Telemetry Metric Bars -->
   <g transform="translate(180, 500)">
     <rect x="0" y="0" width="580" height="58" rx="10" fill="#05060A" stroke="#EDEFF5" stroke-opacity="0.1"/>
     <rect x="0" y="0" width="460" height="58" rx="10" fill="#2DE2E6" fill-opacity="0.12"/>
-    <text x="24" y="36" font-family="JetBrains Mono, monospace" font-size="17" fill="#2DE2E6" letter-spacing="2">01 // 3.4K GITHUB STARS</text>
+    <text x="24" y="36" font-family="JetBrains Mono, monospace" font-size="17" fill="#2DE2E6" letter-spacing="2">01 // 98+ LIGHTHOUSE SEO</text>
 
     <rect x="0" y="78" width="580" height="58" rx="10" fill="#05060A" stroke="#EDEFF5" stroke-opacity="0.1"/>
     <rect x="0" y="78" width="510" height="58" rx="10" fill="#7B5CFF" fill-opacity="0.15"/>
-    <text x="24" y="114" font-family="JetBrains Mono, monospace" font-size="17" fill="#EDEFF5" letter-spacing="2">02 // 45+ SHADER NODES</text>
+    <text x="24" y="114" font-family="JetBrains Mono, monospace" font-size="17" fill="#EDEFF5" letter-spacing="2">02 // -60% SERVER TTFB</text>
 
     <rect x="0" y="156" width="580" height="58" rx="10" fill="#05060A" stroke="#EDEFF5" stroke-opacity="0.1"/>
     <rect x="0" y="156" width="420" height="58" rx="10" fill="#D4FF1F" fill-opacity="0.14"/>
-    <text x="24" y="192" font-family="JetBrains Mono, monospace" font-size="17" fill="#EDEFF5" letter-spacing="2">03 // 18KB GZIPPED</text>
+    <text x="24" y="192" font-family="JetBrains Mono, monospace" font-size="17" fill="#EDEFF5" letter-spacing="2">03 // FR / EN / AR MULTILINGUAL</text>
   </g>
 
-  <!-- Right Shader Waveform Nodes -->
   <g transform="translate(960, 320)">
     <rect x="0" y="0" width="740" height="440" rx="20" fill="#0B0D14" fill-opacity="0.72" stroke="#EDEFF5" stroke-opacity="0.14"/>
     <path d="M 40 320 Q 150 120, 260 260 T 480 180 T 700 220" fill="none" stroke="#2DE2E6" stroke-width="4"/>
@@ -75,15 +68,14 @@
     <circle cx="260" cy="260" r="8" fill="#2DE2E6"/>
     <circle cx="480" cy="180" r="8" fill="#2DE2E6"/>
     <circle cx="700" cy="220" r="8" fill="#2DE2E6"/>
-    <text x="40" y="55" font-family="JetBrains Mono, monospace" font-size="15" fill="#8A90A6" letter-spacing="3">REALTIME_FBM_DISPLACEMENT // 60.0 FPS</text>
-    <text x="540" y="55" font-family="JetBrains Mono, monospace" font-size="15" fill="#2DE2E6" letter-spacing="2">● LIVE STREAM</text>
+    <text x="40" y="55" font-family="JetBrains Mono, monospace" font-size="15" fill="#8A90A6" letter-spacing="3">ARCHITECTURE // PHP · SQL · REST API</text>
+    <text x="540" y="55" font-family="JetBrains Mono, monospace" font-size="15" fill="#2DE2E6" letter-spacing="2">● VERIFIED</text>
   </g>
 
-  <!-- Bottom Status Strip -->
   <line x1="80" y1="910" x2="1840" y2="910" stroke="#EDEFF5" stroke-opacity="0.08"/>
   <g font-family="JetBrains Mono, monospace" font-size="16" fill="#8A90A6" letter-spacing="3">
-    <text x="130" y="958">COORD // X:1440 Y:0900</text>
-    <text x="820" y="958" fill="#2DE2E6">[ DISPLACEMENT SHADER READY ]</text>
-    <text x="1550" y="958">NEXUS-FOLIO STUDIO</text>
+    <text x="130" y="958">LYON, FRANCE // +33 6 15 21 88 14</text>
+    <text x="790" y="958" fill="#2DE2E6">[ MOSTEPHA AMINE BDEIRA ]</text>
+    <text x="1550" y="958">MABDEIRA.DEV</text>
   </g>
 </svg>

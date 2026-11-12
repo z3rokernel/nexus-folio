@@ -1,4 +1,4 @@
-# ⚡ NEXUS-FOLIO // Generative-AI Film Studio Portfolio
+# ⚡ Mostepha Amine Bdeira — mabdeira.dev
 
 ![PHP 8.2+](https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![CodeIgniter 4.7](https://img.shields.io/badge/CodeIgniter-4.7-EF4223?style=for-the-badge&logo=codeigniter&logoColor=white)
@@ -7,7 +7,7 @@
 ![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4.3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![License MIT](https://img.shields.io/badge/License-MIT-D4FF1F?style=for-the-badge)
 
-> **NEXUS-FOLIO** is a personal portfolio presented as a **generative-AI film studio control room**. Visitors enter a dark neo-noir interface (`#05060A`) where projects are *scenes on a timeline*—powered by a server-rendered **CodeIgniter 4** backend, custom **Three.js GLSL liquid & displacement shaders**, **GSAP 3.13 + ScrollTrigger + Flip + SplitText + ScrambleText**, **Lenis** smooth scroll, **Barba.js** 5-slice scene transitions, and **10 interactive Easter eggs**.
+> **mabdeira.dev** is the official engineering portfolio of **Mostepha Amine Bdeira** (Full-Stack Web Developer & QA Tester based in Lyon, France). Built on a server-rendered **CodeIgniter 4** backend with custom **Three.js GLSL shaders**, **GSAP 3.13 + ScrollTrigger + Flip + SplitText + ScrambleText**, **Lenis** smooth scroll, **Barba.js** page transitions, and interactive developer telemetry.
 
 ---
 
@@ -66,12 +66,14 @@ vendor/bin/phpunit
 | `app.baseURL` | `'http://localhost:8080/'` | Canonical base URL |
 | `database.default.DBDriver` | `SQLite3` | `SQLite3` for local dev, `MySQLi` for production |
 | `database.default.database` | `db.sqlite` | Stored in `writable/db.sqlite` |
-| `PORTFOLIO_NAME` | `'Mostepha Amine BDEIR'` | Operator name displayed across Hero, About, SEO & Footer |
-| `PORTFOLIO_CITY` | `'Paris, France'` | Displayed in top HUD telemetry bar |
+| `PORTFOLIO_NAME` | `'Mostepha Amine Bdeira'` | Developer name displayed across Hero, About, SEO & Footer |
+| `PORTFOLIO_HANDLE` | `'MABDEIRA.DEV'` | Brand mark & header handle |
+| `PORTFOLIO_CITY` | `'Lyon, France'` | Displayed in top HUD telemetry bar |
 | `PORTFOLIO_TIMEZONE` | `'Europe/Paris'` | Timezone for live HUD clock |
-| `PORTFOLIO_EMAIL` | `'contact@nexus-folio.dev'` | Direct contact & click-to-copy email |
-| `GITHUB_USER` | `'aminebdeir'` | Username queried by `/api/github` |
-| `CONTACT_TO` | `'contact@nexus-folio.dev'` | Recipient for `/contact` email dispatches |
+| `PORTFOLIO_EMAIL` | `'contact@mabdeira.dev'` | Direct contact & click-to-copy email |
+| `PORTFOLIO_PHONE` | `'+33 6 15 21 88 14'` | Direct phone number on Contact & About pages |
+| `GITHUB_USER` | `'z3rokernel'` | Username queried by `/api/github` |
+| `CONTACT_TO` | `'contact@mabdeira.dev'` | Recipient for `/contact` email dispatches |
 
 ---
 

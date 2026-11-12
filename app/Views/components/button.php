@@ -25,3 +25,4 @@ $cursor  = $cursor ?? 'link';
     <i data-lucide="<?= esc($icon) ?>" class="w-4 h-4"></i>
   <?php endif; ?>
 </a>
+

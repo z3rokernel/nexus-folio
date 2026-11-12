@@ -75,7 +75,7 @@ export function initCommandPalette() {
 
     const action = item.getAttribute('data-action');
     if (action === 'copy-email') {
-      const email = item.getAttribute('data-email') || 'contact@nexus-folio.dev';
+      const email = item.getAttribute('data-email') || 'contact@mabdeira.dev';
       copyToClipboard(email, 'EMAIL COPIED');
     } else if (action === 'download-cv') {
       const href = item.getAttribute('data-href') || '/cv.pdf';
@@ -174,3 +174,4 @@ export function openCommandPalette() {
 export function closeCommandPalette() {
   if (closeFn) closeFn();
 }
+

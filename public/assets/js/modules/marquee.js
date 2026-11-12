@@ -42,3 +42,4 @@ export function destroyMarquee() {
     rafId = null;
   }
 }
+

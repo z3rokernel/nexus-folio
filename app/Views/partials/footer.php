@@ -86,17 +86,18 @@
     <div class="pt-6 border-t border-white/10 select-none overflow-hidden">
       <div
         id="footer-giant-name"
-        class="font-display font-black text-[clamp(2.5rem,9vw,10.5rem)] leading-[0.88] tracking-tighter text-stroke uppercase text-center"
+        class="font-display font-black text-[clamp(2.2rem,8.2vw,9.8rem)] leading-[0.88] tracking-tighter text-stroke uppercase text-center"
       >
-        NEXUS//FOLIO
+        MABDEIRA.DEV
       </div>
     </div>
 
     <!-- Bottom Copyright & Build Telemetry -->
     <div class="flex flex-wrap items-center justify-between gap-4 font-mono text-[11px] tracking-[0.16em] uppercase text-[var(--text-dim)]">
-      <span>© <?= date('Y') ?> <?= esc($site['name'] ?? 'Mostepha Amine BDEIR') ?>. ALL RIGHTS RESERVED.</span>
-      <span>STACK // CODEIGNITER 4 · THREE.JS · GSAP 3 · TAILWIND V4</span>
+      <span>© <?= date('Y') ?> <?= esc($site['name'] ?? 'Mostepha Amine Bdeira') ?> · LYON, FRANCE · <?= esc($site['email'] ?? 'contact@mabdeira.dev') ?></span>
+      <span>STACK // PHP 8.2+ · CODEIGNITER 4 · LARAVEL · SQL · THREE.JS · GSAP 3</span>
     </div>
 
   </div>
 </footer>
+

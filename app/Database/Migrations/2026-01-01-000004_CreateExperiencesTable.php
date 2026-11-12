@@ -51,3 +51,4 @@ class CreateExperiencesTable extends Migration
         $this->forge->dropTable('experiences', true);
     }
 }
+

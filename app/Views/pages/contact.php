@@ -41,23 +41,31 @@ $flashErrors  = session()->getFlashdata('errors') ?? [];
       <!-- Direct Channels Card -->
       <div class="glass-card p-7 sm:p-8 border border-white/15 space-y-6 font-mono">
         <div class="space-y-2 border-b border-white/10 pb-5">
-          <span class="text-[10px] tracking-[0.2em] uppercase text-[var(--text-dim)]">DIRECT FREQUENCY // EMAIL</span>
+          <span class="text-[10px] tracking-[0.2em] uppercase text-[var(--text-dim)]">PRIMARY EMAIL // MABDEIRA.DEV</span>
           <div class="flex items-center justify-between gap-3">
-            <span class="text-sm sm:text-base text-white font-semibold break-all"><?= esc($site['email'] ?? 'contact@nexus-folio.dev') ?></span>
+            <span class="text-sm sm:text-base text-white font-semibold break-all"><?= esc($site['email'] ?? 'contact@mabdeira.dev') ?></span>
             <button
               type="button"
-              data-copy-email="<?= esc($site['email'] ?? 'contact@nexus-folio.dev') ?>"
+              data-copy-email="<?= esc($site['email'] ?? 'contact@mabdeira.dev') ?>"
               class="px-3 py-1.5 rounded-lg bg-[var(--acid)] text-[var(--void)] text-[11px] font-bold uppercase tracking-wider shrink-0 hover:brightness-110 transition"
             >
               COPY
             </button>
           </div>
+          <?php if (! empty($site['phone'])): ?>
+            <p class="text-xs text-[var(--text-dim)] pt-1">
+              TEL: <a href="tel:<?= esc(preg_replace('/\s+/', '', (string) $site['phone'])) ?>" class="text-[var(--cyan)] hover:underline"><?= esc((string) $site['phone']) ?></a>
+              <?php if (! empty($site['alt_email'])): ?>
+                · ALT: <span class="text-white/80"><?= esc((string) $site['alt_email']) ?></span>
+              <?php endif; ?>
+            </p>
+          <?php endif; ?>
         </div>
 
         <div class="grid grid-cols-2 gap-4 border-b border-white/10 pb-5">
           <div>
-            <span class="text-[10px] tracking-[0.2em] uppercase text-[var(--text-dim)]">BASE SECTOR</span>
-            <p class="text-xs sm:text-sm text-white mt-1"><?= esc($site['city'] ?? 'Paris, France') ?></p>
+            <span class="text-[10px] tracking-[0.2em] uppercase text-[var(--text-dim)]">LOCATION</span>
+            <p class="text-xs sm:text-sm text-white mt-1"><?= esc($site['city'] ?? 'Lyon, France') ?></p>
           </div>
           <div>
             <span class="text-[10px] tracking-[0.2em] uppercase text-[var(--text-dim)]">RESPONSE SLA</span>

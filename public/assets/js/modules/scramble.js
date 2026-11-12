@@ -37,3 +37,4 @@ export function destroyScramble() {
   cleanups.forEach((fn) => fn());
   cleanups = [];
 }
+

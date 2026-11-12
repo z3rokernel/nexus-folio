@@ -105,3 +105,4 @@ export function resetCursorState() {
   if (ring) ring.classList.remove('is-expanded');
   if (dot) dot.style.opacity = '1';
 }
+

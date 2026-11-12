@@ -13,3 +13,4 @@ This document logs intentional enhancements or technical choices made during the
 ## 3. CSRF Cookie Token Persistence for AJAX & Rate-Limit Testing (`app/Config/Security.php`)
 - **Context:** Contact form supports progressive enhancement (both AJAX `fetch` with `Accept: application/json` and standard POST redirect) protected by `csrf`, `honeypot`, and `throttle:5,60`.
 - **Decision:** Set `Security::$regenerate = false` (per-session/window token validity) and returned fresh `csrfHash` tokens in JSON responses so rapid legitimate AJAX retries and automated PHPUnit rate-limit tests (`testContactThrottleFilterReturns429OnSixthCall`) hit the `ThrottleFilter` (`429 Too Many Requests`) cleanly.
+

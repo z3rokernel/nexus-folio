@@ -135,3 +135,4 @@ class CreateProjectsTable extends Migration
         $this->forge->dropTable('projects', true);
     }
 }
+

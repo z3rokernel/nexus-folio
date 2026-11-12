@@ -47,26 +47,26 @@
       <div class="inline-flex items-center gap-3 font-mono text-xs tracking-[0.22em] uppercase text-[var(--acid)]">
         <span>01 //</span>
         <span class="h-px w-8 bg-[var(--acid)]/50"></span>
-        <span class="text-white/75">OPERATOR DOSSIER</span>
+        <span class="text-white/75">MOSTEPHA AMINE BDEIRA // LYON, FRANCE</span>
       </div>
 
       <h1
         data-split="chars"
-        aria-label="ENGINEERING WHERE CINEMA MEETS SYSTEMS ARCHITECTURE"
+        aria-label="MOSTEPHA AMINE BDEIRA — FULL-STACK DEVELOPER & QA ENGINEER"
         class="font-display section-display-size font-black uppercase tracking-tight text-white"
       >
-        WHERE <span class="text-chrome">CINEMA</span> MEETS SYSTEMS ARCHITECTURE.
+        8+ YEARS BUILDING <span class="text-chrome">ROBUST</span> WEB &amp; SQL SYSTEMS.
       </h1>
 
       <div class="space-y-5 text-base sm:text-lg text-[var(--text-dim)] leading-relaxed">
         <p>
-          I’m <strong class="text-white"><?= esc($site['name'] ?? 'Mostepha Amine BDEIR') ?></strong>, a Full-Stack Architect, Creative Technologist, and AI Systems Builder based in <span class="text-white"><?= esc($site['city'] ?? 'Paris, France') ?></span>.
+          I’m <strong class="text-white"><?= esc($site['name'] ?? 'Mostepha Amine Bdeira') ?></strong>, a Full-Stack Web Developer and QA Specialist based in <span class="text-white"><?= esc($site['city'] ?? 'Lyon, France') ?></span> with over <strong class="text-[var(--acid)]">8 years of freelance experience</strong> and more than <strong class="text-white">30 custom web projects delivered</strong> for SMBs, e-commerce brands, and associations.
         </p>
         <p>
-          Over the past 6+ years, I have specialized in bridging two disciplines that rarely talk to each other: <strong class="text-[var(--acid)]">rigorous backend software engineering</strong> (PHP 8.3, CodeIgniter 4, distributed data pipelines, strict security) and <strong class="text-[var(--cyan)]">avant-garde interactive motion</strong> (custom GLSL shaders, Three.js, 60fps GSAP choreography).
+          I specialize in end-to-end web engineering: gathering business requirements, designing normalized <strong class="text-[var(--acid)]">MySQL and PostgreSQL</strong> databases, building clean MVC backends with <strong class="text-white">PHP, CodeIgniter 4, and Laravel</strong>, and crafting responsive interfaces with <strong class="text-[var(--cyan)]">Tailwind CSS and JavaScript</strong>.
         </p>
         <p>
-          Whether launching a real-time generative video studio or a high-concurrency telemetry cockpit, my rule is non-negotiable: <em class="text-white">every frame must feel alive, and every endpoint must be rock-solid.</em>
+          Every system I deliver is backed by rigorous <em class="text-white">REST API testing (Postman), automated unit/feature tests (PHPUnit), custom debugging scripts, and Linux production deployment</em>. I hold a <strong class="text-white">Master’s degree in Intelligent Computer Systems</strong> (officially recognized Level 7 in France by ENIC-NARIC), with a thesis focused on Deep Learning and AI-assisted e-learning.
         </p>
       </div>
 
@@ -96,8 +96,8 @@
     <?= view('components/section-title', [
         'index'    => '02',
         'label'    => 'INTERACTIVE SHELL // TYPE HELP',
-        'title'    => 'NEXUS TERMINAL OS',
-        'subtitle' => 'Execute live commands below: try help, whoami, skills, projects, contact, theme acid|plasma|cyan, or clear.',
+        'title'    => 'MABDEIRA.DEV TERMINAL',
+        'subtitle' => 'Execute live commands below: try help, whoami, skills, projects, education, contact, theme acid|plasma|cyan, or clear.',
     ]) ?>
 
     <div class="glass-card border border-[var(--acid)]/35 overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.85)]">
@@ -107,7 +107,7 @@
           <span class="w-3 h-3 rounded-full bg-[#FF3B5C]"></span>
           <span class="w-3 h-3 rounded-full bg-[#F59E0B]"></span>
           <span class="w-3 h-3 rounded-full bg-[#D4FF1F]"></span>
-          <span class="ml-3 text-white/80 tracking-wider">amine@nexus-folio: ~/studio</span>
+          <span class="ml-3 text-white/80 tracking-wider">amine@mabdeira.dev: ~/portfolio</span>
         </div>
         <div class="flex items-center gap-2">
           <button type="button" data-term-quick="whoami" class="px-2 py-0.5 rounded bg-white/5 hover:bg-[var(--acid)] hover:text-[var(--void)] text-[10px] text-[var(--acid)] transition-colors">whoami</button>
@@ -123,17 +123,17 @@
         class="p-6 font-mono text-xs sm:text-sm leading-relaxed space-y-3 h-[340px] overflow-y-auto bg-[#05060A]/95 text-white/90"
         aria-live="polite"
       >
-        <div class="text-[var(--text-dim)]">// NEXUS-FOLIO INTERACTIVE SHELL v4.2 — SESSION INITIALIZED</div>
-        <div><span class="text-[var(--acid)]">amine@nexus:~$</span> <span class="text-white">whoami</span></div>
-        <div class="text-[var(--cyan)] pl-4">Mostepha Amine BDEIR — Principal Creative Technologist, Full-Stack Architect (PHP/CI4) &amp; WebGL/AI Builder.</div>
-        <div><span class="text-[var(--acid)]">amine@nexus:~$</span> <span class="text-white">cat skills.txt</span></div>
-        <div class="text-white/80 pl-4">[Backend] PHP 8.3, CodeIgniter 4, SQLite/MySQL, Redis · [Frontend] Three.js, GLSL, GSAP 3.13, Tailwind v4 · [AI] RAG, Agents, WebAudio DSP</div>
+        <div class="text-[var(--text-dim)]">// MABDEIRA.DEV INTERACTIVE SHELL — SESSION INITIALIZED</div>
+        <div><span class="text-[var(--acid)]">amine@mabdeira.dev:~$</span> <span class="text-white">whoami</span></div>
+        <div class="text-[var(--cyan)] pl-4">Mostepha Amine Bdeira — Full-Stack Web Developer (8+ yrs, 30+ projects) &amp; QA Specialist in Lyon, France. Master in Intelligent Computer Systems (Level 7).</div>
+        <div><span class="text-[var(--acid)]">amine@mabdeira.dev:~$</span> <span class="text-white">cat skills.txt</span></div>
+        <div class="text-white/80 pl-4">[Backend &amp; DB] PHP, CodeIgniter 4, Laravel, SQL, MySQL, PostgreSQL, REST APIs · [QA] Postman, PHPUnit, Debugging · [Frontend] Tailwind CSS, JS, HTML5/CSS3</div>
         <div class="text-[var(--text-dim)]">// Type <span class="text-[var(--acid)]">help</span> and press Enter to explore interactive commands.</div>
       </div>
 
       <!-- Terminal Prompt Input -->
       <form id="about-terminal-form" class="flex items-center gap-3 px-6 py-4 bg-[#0B0D14]/90 border-t border-white/10 font-mono text-sm">
-        <label for="about-terminal-input" class="text-[var(--acid)] shrink-0 font-semibold">amine@nexus:~$</label>
+        <label for="about-terminal-input" class="text-[var(--acid)] shrink-0 font-semibold">amine@mabdeira.dev:~$</label>
         <input
           type="text"
           id="about-terminal-input"
@@ -204,12 +204,12 @@
             <p class="text-xs sm:text-sm text-[var(--cyan)]"><?= esc($currently['learning']) ?></p>
           </div>
           <div class="space-y-1 border-b border-white/10 pb-4">
-            <span class="text-[10px] tracking-[0.18em] uppercase text-[var(--text-dim)]">STUDIO ROTATION (AUDIO)</span>
-            <p class="text-xs sm:text-sm text-white/90"><?= esc($currently['listening']) ?></p>
+            <span class="text-[10px] tracking-[0.18em] uppercase text-[var(--text-dim)]">EDUCATION (LEVEL 7)</span>
+            <p class="text-xs sm:text-sm text-white/90"><?= esc($currently['education']) ?></p>
           </div>
           <div class="space-y-1">
-            <span class="text-[10px] tracking-[0.18em] uppercase text-[var(--text-dim)]">READING</span>
-            <p class="text-xs sm:text-sm text-white/80"><?= esc($currently['reading']) ?></p>
+            <span class="text-[10px] tracking-[0.18em] uppercase text-[var(--text-dim)]">LANGUAGES</span>
+            <p class="text-xs sm:text-sm text-white/80"><?= esc($currently['languages']) ?></p>
           </div>
         </div>
       </div>
@@ -219,3 +219,4 @@
 </div>
 
 <?= $this->endSection() ?>
+

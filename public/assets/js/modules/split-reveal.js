@@ -146,3 +146,4 @@ export function destroySplitReveal() {
   triggers.forEach((st) => st.kill());
   triggers = [];
 }
+

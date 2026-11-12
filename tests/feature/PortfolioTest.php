@@ -32,8 +32,8 @@ final class PortfolioTest extends CIUnitTestCase
         $result = $this->get('/');
 
         $result->assertStatus(200);
-        $result->assertSee('ARCHITECTING');
-        $result->assertSee('AETHER ENGINE');
+        $result->assertSee('MOSTEPHA AMINE');
+        $result->assertSee('SHOPPING FRANCE');
         $result->assertHeader('Content-Security-Policy');
         $result->assertHeader('X-Frame-Options', 'SAMEORIGIN');
     }
@@ -43,18 +43,18 @@ final class PortfolioTest extends CIUnitTestCase
         $all = $this->get('work');
         $all->assertStatus(200);
         $all->assertSee('SELECTED');
-        $all->assertSee('AETHER ENGINE');
+        $all->assertSee('SHOPPING FRANCE');
 
         $filtered = $this->get('work?tag=open-source');
         $filtered->assertStatus(200);
-        $filtered->assertSee('PRISM GLSL KIT');
+        $filtered->assertSee('MABDEIRA SHADER LAB');
     }
 
     public function testCaseStudyPageReturns200ForValidSlugAnd404ForUnknownSlug(): void
     {
-        $valid = $this->get('work/aether-engine');
+        $valid = $this->get('work/shopping-france');
         $valid->assertStatus(200);
-        $valid->assertSee('AETHER ENGINE');
+        $valid->assertSee('SHOPPING FRANCE');
         $valid->assertSee('PROBLEM STATEMENT');
 
         $notFound = $this->get('work/nope-non-existent-scene');
@@ -66,11 +66,11 @@ final class PortfolioTest extends CIUnitTestCase
     {
         $about = $this->get('about');
         $about->assertStatus(200);
-        $about->assertSee('NEXUS TERMINAL OS');
+        $about->assertSee('MABDEIRA.DEV TERMINAL');
 
         $contact = $this->get('contact');
         $contact->assertStatus(200);
-        $contact->assertSee('INITIATE');
+        $contact->assertSee('CONTACT');
 
         $github = $this->get('api/github');
         $github->assertStatus(200);
@@ -82,7 +82,7 @@ final class PortfolioTest extends CIUnitTestCase
         $sitemap = $this->get('sitemap.xml');
         $sitemap->assertStatus(200);
         $sitemap->assertSee('<urlset');
-        $sitemap->assertSee('work/aether-engine');
+        $sitemap->assertSee('work/shopping-france');
     }
 
     public function testContactFormValidationAndValidSubmission(): void

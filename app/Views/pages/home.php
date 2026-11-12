@@ -46,12 +46,12 @@
     <div class="space-y-3">
       <h1
         id="hero-headline"
-        aria-label="<?= esc($site['name'] ?? 'MOSTEPHA AMINE BDEIR') ?> — ARCHITECTING CINEMATIC AI & WEBGL SYSTEMS"
+        aria-label="MOSTEPHA AMINE BDEIRA — FULL-STACK WEB DEVELOPER & QA SPECIALIST"
         class="font-display hero-display-size font-black uppercase tracking-tight text-white"
       >
-        <span data-hero-split class="block">ARCHITECTING</span>
-        <span class="block text-chrome">LIQUID INTELLIGENCE</span>
-        <span data-hero-split class="block text-white/90">&amp; NEXT-GEN WEB.</span>
+        <span data-hero-split class="block">MOSTEPHA AMINE</span>
+        <span class="block text-chrome">BDEIRA // FULL-STACK</span>
+        <span data-hero-split class="block text-white/90">&amp; QA ARCHITECT.</span>
       </h1>
     </div>
 
@@ -62,7 +62,7 @@
           id="hero-subcopy"
           class="text-lg sm:text-xl lg:text-2xl text-[var(--text-dim)] max-w-2xl leading-relaxed font-normal"
         >
-          I’m <strong class="text-white font-semibold"><?= esc($site['name'] ?? 'Mostepha Amine BDEIR') ?></strong> — designing &amp; engineering high-velocity digital products where <span class="text-[var(--acid)]">CodeIgniter 4</span> precision meets <span class="text-white">real-time GLSL shaders</span> and <span class="text-[var(--cyan)]">agentic AI workflows</span>.
+          Full-Stack Web Developer with <strong class="text-white font-semibold">8+ years of freelance experience</strong> and <strong class="text-[var(--acid)] font-semibold">30+ projects delivered</strong> — building custom web &amp; e-commerce platforms with <span class="text-white">PHP, CodeIgniter 4, Laravel, MySQL &amp; PostgreSQL</span>, backed by rigorous <span class="text-[var(--cyan)]">Postman &amp; PHPUnit QA testing</span>.
         </p>
 
         <!-- Primary & Secondary Magnetic CTAs -->
@@ -75,7 +75,7 @@
               'cursor'  => 'view',
           ]) ?>
           <?= view('components/button', [
-              'label'   => '> HIRE_ME --NOW',
+              'label'   => '> CONTACT@MABDEIRA.DEV',
               'href'    => base_url('contact'),
               'primary' => false,
               'icon'    => 'terminal',
@@ -88,15 +88,15 @@
       <div class="lg:col-span-5 flex lg:justify-end">
         <div class="glass-card p-5 sm:p-6 max-w-sm w-full space-y-3 border border-white/15">
           <div class="flex items-center justify-between font-mono text-[11px] tracking-[0.18em] text-[var(--acid)] uppercase">
-            <span>// VIEWPORT SHADER</span>
-            <span>60.0 FPS LOCKED</span>
+            <span>// MABDEIRA.DEV</span>
+            <span>MASTER LEVEL 7</span>
           </div>
           <p class="font-mono text-xs text-[var(--text-dim)] leading-relaxed">
-            Domain-warped FBM liquid field + interactive pointer ripple. Move cursor or scroll to modulate uniform state.
+            Master in Intelligent Computer Systems (ENIC-NARIC recognized) · 8+ yrs PHP/SQL/REST API · QA &amp; Automated Testing.
           </p>
           <div class="pt-2 border-t border-white/10 flex items-center justify-between font-mono text-[10px] tracking-[0.16em] text-white/70 uppercase">
-            <span>LOC: <?= esc($site['city'] ?? 'Paris, France') ?></span>
-            <span class="text-emerald-400">● ONLINE</span>
+            <span>LOC: <?= esc($site['city'] ?? 'Lyon, France') ?></span>
+            <span class="text-emerald-400">● AVAILABLE</span>
           </div>
         </div>
       </div>
@@ -568,3 +568,4 @@
 </section>
 
 <?= $this->endSection() ?>
+

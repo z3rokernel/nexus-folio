@@ -217,16 +217,16 @@ function initAboutTerminal(container) {
     const cmd = raw.trim().toLowerCase();
     if (!cmd) return;
 
-    appendLine(`<span class="text-[var(--acid)]">amine@nexus:~$</span> <span class="text-white">${raw.replace(/</g, '&lt;')}</span>`);
+    appendLine(`<span class="text-[var(--acid)]">amine@mabdeira.dev:~$</span> <span class="text-white">${raw.replace(/</g, '&lt;')}</span>`);
 
     if (cmd === 'help') {
       appendLine(
         `<div class="pl-4 text-[var(--cyan)] space-y-1">
           <div>Available commands:</div>
-          <div>· <span class="text-white">whoami</span> — Operator profile &amp; coordinates</div>
-          <div>· <span class="text-white">skills</span> — Full-stack, WebGL &amp; AI capabilities</div>
-          <div>· <span class="text-white">projects</span> — List active studio scenes</div>
-          <div>· <span class="text-white">contact</span> — Display direct transmission channels</div>
+          <div>· <span class="text-white">whoami</span> — Developer &amp; QA profile</div>
+          <div>· <span class="text-white">skills</span> — Full-Stack, QA Testing &amp; AI capabilities</div>
+          <div>· <span class="text-white">projects</span> — List active portfolio projects</div>
+          <div>· <span class="text-white">contact</span> — Display direct contact channels</div>
           <div>· <span class="text-white">theme acid|plasma|cyan</span> — Live-swap studio accent token</div>
           <div>· <span class="text-white">motion</span> — Toggle reduced-motion accessibility mode</div>
           <div>· <span class="text-white">cv</span> — Open curriculum vitae (PDF)</div>
@@ -235,19 +235,19 @@ function initAboutTerminal(container) {
       );
     } else if (cmd === 'whoami') {
       appendLine(
-        `<div class="pl-4 text-white/90">Mostepha Amine BDEIR // Principal Creative Technologist &amp; Full-Stack Architect based in Paris, France. Building cinema-grade AI &amp; WebGL platforms.</div>`
+        `<div class="pl-4 text-white/90">Mostepha Amine Bdeira // Full-Stack Web Developer &amp; QA Tester based in Lyon, France. 8+ years freelance experience, 30+ web apps delivered, Master Level 7 in Intelligent Computer Systems.</div>`
       );
     } else if (cmd === 'skills' || cmd === 'cat skills.txt') {
       appendLine(
-        `<div class="pl-4 text-[var(--acid)]">[BACKEND] PHP 8.3 · CodeIgniter 4 · SQLite/MySQL · Redis<br>[MOTION] GSAP 3.13 · Three.js · Custom GLSL · Barba.js · Lenis<br>[AI/OPS] Multi-Agent RAG · WebAudio DSP · Docker · GitHub Actions</div>`
+        `<div class="pl-4 text-[var(--acid)]">[BACKEND] PHP 8.3 · CodeIgniter 4 · Laravel · MySQL · PostgreSQL · REST APIs<br>[QA/OPS] PHPUnit · Postman API Testing · Automated Debugging · Linux · Git<br>[FRONTEND/AI] Tailwind CSS · JavaScript · Deep Learning E-Learning · OpenAI/Claude APIs</div>`
       );
     } else if (cmd === 'projects' || cmd === 'ls projects/') {
       appendLine(
-        `<div class="pl-4 text-white/90">01/ aether-engine &nbsp; 02/ kronos-neural-hud &nbsp; 03/ synapse-rag-os &nbsp; 04/ hyperion-synth &nbsp; 05/ void-commerce &nbsp; 06/ prism-shader-kit</div>`
+        `<div class="pl-4 text-white/90">01/ shopping-france &nbsp; 02/ deep-learning-elearning &nbsp; 03/ m4b-enterprise-suite &nbsp; 04/ api-qa-sentinel &nbsp; 05/ aether-engine &nbsp; 06/ seo-cms-accelerator</div>`
       );
     } else if (cmd === 'contact') {
       appendLine(
-        `<div class="pl-4 text-[var(--cyan)]">Email: contact@nexus-folio.dev · Status: Open to select freelance &amp; full-time roles · Route: <a href="/contact" class="underline text-[var(--acid)]">/contact</a></div>`
+        `<div class="pl-4 text-[var(--cyan)]">Email: contact@mabdeira.dev · Phone: +33 6 15 21 88 14 · Location: Lyon, France · Route: <a href="/contact" class="underline text-[var(--acid)]">/contact</a></div>`
       );
     } else if (cmd.startsWith('theme')) {
       const parts = cmd.split(/\s+/);
@@ -423,3 +423,4 @@ export function destroyPageFeatures() {
   cleanups.forEach((fn) => fn());
   cleanups = [];
 }
+

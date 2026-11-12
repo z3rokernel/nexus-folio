@@ -226,3 +226,4 @@ export async function initHeroShader() {
     document.documentElement.classList.add('no-webgl');
   }
 }
+

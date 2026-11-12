@@ -54,17 +54,18 @@ export function initKonamiAndEasterEggs() {
 
   // View-Source DevTools Console Greeting (docs/03 §10.10)
   const ascii = `
-  _   _ _______   ___   _ ____        _____ ___  _     ___ ___  
- | \\ | | ____\\ \\ / / | | / ___|      |  ___/ _ \\| |   |_ _/ _ \\ 
- |  \\| |  _|  \\ V /| | | \\___ \\ _____| |_ | | | | |    | | | | |
- | |\\  | |___  / . \\| |_| |___) |_____|  _|| |_| | |___ | | |_| |
- |_| \\_|_____|/_/ \\_\\\\___/|____/      |_|   \\___/|_____|___\\___/ 
+  __  __    _    ____  ____  _____ ___ ____     _    
+ |  \\/  |  / \\  | __ )|  _ \\| ____|_ _|  _ \\   / \\   
+ | |\\/| | / _ \\ |  _ \\| | | |  _|  | || |_) | / _ \\  
+ | |  | |/ ___ \\| |_) | |_| | |___ | ||  _ < / ___ \\ 
+ |_|  |_/_/   \\_\\____/|____/|_____|___|_| \\_\\_/   \\_\\
   `;
   console.log(
-    `%c${ascii}\n%c// NEXUS-FOLIO STUDIO OS v4.2 — Engineered by Mostepha Amine BDEIR\n%c// Stack: CodeIgniter 4.7 · Three.js GLSL · GSAP 3.13 · Lenis · Barba.js\n%c// Hiring or collaborating? → contact@nexus-folio.dev (Try pressing Ctrl+K or ↑↑↓↓←→←→BA)`,
+    `%c${ascii}\n%c// MOSTEPHA AMINE BDEIRA — https://mabdeira.dev (Lyon, France)\n%c// Stack: PHP 8.2+ · CodeIgniter 4 · Laravel · MySQL/PostgreSQL · Three.js · GSAP 3\n%c// Hiring or collaborating? → contact@mabdeira.dev (Try pressing Ctrl+K or ↑↑↓↓←→←→BA)`,
     'color:#D4FF1F;font-weight:bold;font-family:monospace;',
     'color:#EDEFF5;font-family:monospace;font-size:12px;',
     'color:#2DE2E6;font-family:monospace;font-size:11px;',
     'color:#7B5CFF;font-family:monospace;font-size:11px;'
   );
 }
+

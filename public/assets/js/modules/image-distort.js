@@ -30,3 +30,4 @@ export function destroyImageDistort() {
   cleanups.forEach((fn) => fn());
   cleanups = [];
 }
+

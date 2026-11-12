@@ -38,3 +38,4 @@ class SecurityHeadersFilter implements FilterInterface
         return $response;
     }
 }
+

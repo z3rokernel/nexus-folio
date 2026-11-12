@@ -16,24 +16,24 @@ $current = $namespace ?? 'home';
 <header class="fixed top-0 inset-x-0 z-50 px-5 sm:px-8 py-4 pointer-events-none">
   <div class="max-w-[1800px] mx-auto flex items-center justify-between gap-4">
 
-    <!-- Top-Left: Studio Logo Mark -->
+    <!-- Top-Left: Personal Brand Mark -->
     <a
       href="<?= base_url('/') ?>"
       data-magnetic
       data-cursor="link"
       class="pointer-events-auto group inline-flex items-center gap-3 px-3.5 py-2 rounded-full bg-[#0B0D14]/80 backdrop-blur-md border border-white/10 hover:border-[var(--acid)]/60 transition-colors"
-      aria-label="NEXUS-FOLIO Home"
+      aria-label="Mostepha Amine Bdeira — mabdeira.dev Home"
     >
       <span class="w-2.5 h-2.5 rounded-full bg-[var(--acid)] shadow-[0_0_12px_var(--acid)] group-hover:scale-125 transition-transform"></span>
-      <span class="font-display font-bold text-xs tracking-[0.16em] text-white">NXS<span class="text-[var(--acid)]">//</span></span>
-      <span class="hidden sm:inline-block font-mono text-[11px] tracking-[0.12em] text-[var(--text-dim)] border-l border-white/10 pl-2.5">STUDIO.OS</span>
+      <span class="font-display font-bold text-xs tracking-[0.14em] text-white">M.A.BDEIRA<span class="text-[var(--acid)]">//</span></span>
+      <span class="hidden sm:inline-block font-mono text-[11px] tracking-[0.12em] text-[var(--text-dim)] border-l border-white/10 pl-2.5">MABDEIRA.DEV</span>
     </a>
 
     <!-- Top-Center: Live Clock + City + Quick Primary Links -->
     <div class="hidden lg:flex items-center gap-6 px-5 py-2 rounded-full bg-[#0B0D14]/75 backdrop-blur-md border border-white/10 pointer-events-auto">
       <div class="flex items-center gap-2 font-mono text-[11px] tracking-[0.14em] text-[var(--text-dim)]">
         <span id="hud-daynight-dot" class="w-2 h-2 rounded-full bg-[var(--cyan)]" title="Local Telemetry Active"></span>
-        <span class="text-white uppercase"><?= esc($site['city'] ?? 'Paris, France') ?></span>
+        <span class="text-white uppercase"><?= esc($site['city'] ?? 'Lyon, France') ?></span>
         <span class="text-white/30">//</span>
         <time id="hud-clock" class="text-[var(--acid)] tabular-nums">19:00:00 CET</time>
       </div>
@@ -145,3 +145,4 @@ $current = $namespace ?? 'home';
 
   </div>
 </div>
+

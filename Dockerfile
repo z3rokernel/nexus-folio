@@ -16,3 +16,4 @@ WORKDIR /var/www/html
 COPY . .
 COPY --from=assets /app/public/assets/css/app.css public/assets/css/app.css
 RUN composer install --no-dev --optimize-autoloader && chown -R www-data:www-data writable 2>/dev/null; chmod -R 775 writable
+
