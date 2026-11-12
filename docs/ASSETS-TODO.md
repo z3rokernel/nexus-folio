@@ -18,12 +18,12 @@ Update these environment variables in `.env`:
 
 ---
 
-## 2. Portrait & Resume (`public/`)
+## 2. Portrait & Background Music MP3 (`public/assets/`)
 
 | File Path | Recommended Spec | Notes |
 |---|---|---|
 | `public/assets/img/portrait.svg` (or `.webp` / `.jpg`) | `900×1100` (4:5 portrait), `< 180 KB` | Used on `/about` with duotone/halftone scanline shader |
-| `public/cv.pdf` | Standard A4 PDF | Linked from the About page and the `Ctrl/⌘+K` Command Palette |
+| `public/assets/audio/bgm.mp3` | `.mp3` audio track (`128–192 kbps`, looped) | Played by the HUD **`BGM`** button (`#hud-bgm-btn`) in [sound.js](file:///d:/PORTFOLIO/public/assets/js/modules/sound.js). Drop any `.mp3` song here to use your own soundtrack! |
 
 ---
 

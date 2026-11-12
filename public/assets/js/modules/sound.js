@@ -1,12 +1,15 @@
 /**
- * modules/sound.js — Independent Background Music (Ambient Synth Score) + UI Sound Effects
+ * modules/sound.js — MP3 Background Music Player (/assets/audio/bgm.mp3) + UI Sound Effects (SFX)
  */
 import { state, setSoundEnabled, setBgmEnabled } from '../core/state.js';
 import { showToast } from '../core/utils.js';
 
 let audioCtx = null;
-let bgmNodes = null;
-let bgmArpTimer = null;
+let bgmAudio = null;
+let fadeInterval = null;
+
+const BGM_SRC = '/assets/audio/bgm.mp3';
+const BGM_TARGET_VOLUME = 0.45;
 
 function ensureContext() {
   if (!audioCtx && (window.AudioContext || window.webkitAudioContext)) {
@@ -87,128 +90,61 @@ export function playTransitionSweep() {
 }
 
 /* =====================================================================
-   2. CINEMATIC AMBIENT BACKGROUND MUSIC (BGM) — Independent Toggle
+   2. MP3 BACKGROUND MUSIC PLAYER (/assets/audio/bgm.mp3)
    ===================================================================== */
-function startAmbientBgm() {
-  const ctx = ensureContext();
-  if (!ctx || bgmNodes) return;
-
-  const now = ctx.currentTime;
-
-  // Master BGM bus with smooth fade-in
-  const masterGain = ctx.createGain();
-  masterGain.gain.setValueAtTime(0.0001, now);
-  masterGain.gain.linearRampToValueAtTime(0.14, now + 1.8);
-  masterGain.connect(ctx.destination);
-
-  // Warm Lowpass Filter modulated by a slow LFO
-  const filter = ctx.createBiquadFilter();
-  filter.type = 'lowpass';
-  filter.frequency.setValueAtTime(420, now);
-  filter.Q.setValueAtTime(2.2, now);
-  filter.connect(masterGain);
-
-  const lfo = ctx.createOscillator();
-  const lfoGain = ctx.createGain();
-  lfo.type = 'sine';
-  lfo.frequency.setValueAtTime(0.08, now); // 12.5s breathing cycle
-  lfoGain.gain.setValueAtTime(240, now);
-  lfo.connect(lfoGain);
-  lfoGain.connect(filter.frequency);
-  lfo.start(now);
-
-  // Stereo-like Delay Echo for Arpeggiator
-  const delay = ctx.createDelay(1.0);
-  delay.delayTime.setValueAtTime(0.375, now);
-  const delayFeedback = ctx.createGain();
-  delayFeedback.gain.setValueAtTime(0.42, now);
-  const delayFilter = ctx.createBiquadFilter();
-  delayFilter.type = 'lowpass';
-  delayFilter.frequency.setValueAtTime(1100, now);
-
-  delay.connect(delayFilter);
-  delayFilter.connect(delayFeedback);
-  delayFeedback.connect(delay);
-  delay.connect(masterGain);
-
-  // Deep Sub & Pad Oscillators (A minor 9th atmospheric chord: A1, E2, A2, C3, E3, B3)
-  const padFreqs = [
-    { freq: 55.0, type: 'sawtooth', detune: -4, vol: 0.32 },
-    { freq: 82.41, type: 'sawtooth', detune: 5, vol: 0.22 },
-    { freq: 110.0, type: 'triangle', detune: -7, vol: 0.20 },
-    { freq: 130.81, type: 'sine', detune: 3, vol: 0.16 },
-    { freq: 164.81, type: 'triangle', detune: 6, vol: 0.14 },
-    { freq: 246.94, type: 'sine', detune: -5, vol: 0.10 },
-  ];
-
-  const oscList = padFreqs.map((cfg) => {
-    const osc = ctx.createOscillator();
-    const g = ctx.createGain();
-    osc.type = cfg.type;
-    osc.frequency.setValueAtTime(cfg.freq, now);
-    osc.detune.setValueAtTime(cfg.detune, now);
-    g.gain.setValueAtTime(cfg.vol, now);
-    osc.connect(g);
-    g.connect(filter);
-    osc.start(now);
-    return osc;
-  });
-
-  // Gentle Sci-Fi Arpeggiator Sequence
-  const arpNotes = [220.0, 261.63, 329.63, 392.0, 493.88, 392.0, 329.63, 246.94];
-  let step = 0;
-
-  bgmArpTimer = window.setInterval(() => {
-    if (!state.bgmEnabled || !audioCtx || audioCtx.state !== 'running') return;
-    const t = audioCtx.currentTime;
-    const note = arpNotes[step % arpNotes.length];
-    step += 1;
-
-    const arpOsc = audioCtx.createOscillator();
-    const arpGain = audioCtx.createGain();
-    arpOsc.type = 'sine';
-    arpOsc.frequency.setValueAtTime(note, t);
-
-    arpGain.gain.setValueAtTime(0.0001, t);
-    arpGain.gain.linearRampToValueAtTime(0.045, t + 0.04);
-    arpGain.gain.exponentialRampToValueAtTime(0.0001, t + 0.45);
-
-    arpOsc.connect(arpGain);
-    arpGain.connect(filter);
-    arpGain.connect(delay);
-
-    arpOsc.start(t);
-    arpOsc.stop(t + 0.48);
-  }, 500);
-
-  bgmNodes = { masterGain, oscList, lfo };
+function getBgmPlayer() {
+  if (!bgmAudio) {
+    bgmAudio = new Audio(BGM_SRC);
+    bgmAudio.loop = true;
+    bgmAudio.preload = 'auto';
+    bgmAudio.volume = 0;
+  }
+  return bgmAudio;
 }
 
-function stopAmbientBgm() {
-  if (bgmArpTimer) {
-    clearInterval(bgmArpTimer);
-    bgmArpTimer = null;
-  }
-  if (!bgmNodes || !audioCtx) {
-    bgmNodes = null;
-    return;
+function startMp3Bgm() {
+  const player = getBgmPlayer();
+  if (fadeInterval) {
+    clearInterval(fadeInterval);
+    fadeInterval = null;
   }
 
-  const now = audioCtx.currentTime;
-  const { masterGain, oscList, lfo } = bgmNodes;
-  bgmNodes = null;
+  player.volume = 0.05;
+  const playPromise = player.play();
+  if (playPromise && typeof playPromise.catch === 'function') {
+    playPromise.catch(() => {
+      showToast('⚠ PLACE OR ENABLE /assets/audio/bgm.mp3');
+    });
+  }
 
-  try {
-    masterGain.gain.cancelScheduledValues(now);
-    masterGain.gain.setValueAtTime(Math.max(masterGain.gain.value, 0.0001), now);
-    masterGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.6);
-    setTimeout(() => {
-      oscList.forEach((o) => {
-        try { o.stop(); } catch (_) {}
-      });
-      try { lfo.stop(); } catch (_) {}
-    }, 650);
-  } catch (_) {}
+  fadeInterval = window.setInterval(() => {
+    if (player.volume < BGM_TARGET_VOLUME - 0.03) {
+      player.volume = Math.min(BGM_TARGET_VOLUME, player.volume + 0.03);
+    } else {
+      player.volume = BGM_TARGET_VOLUME;
+      clearInterval(fadeInterval);
+      fadeInterval = null;
+    }
+  }, 60);
+}
+
+function stopMp3Bgm() {
+  if (!bgmAudio) return;
+  if (fadeInterval) {
+    clearInterval(fadeInterval);
+    fadeInterval = null;
+  }
+
+  fadeInterval = window.setInterval(() => {
+    if (bgmAudio.volume > 0.04) {
+      bgmAudio.volume = Math.max(0, bgmAudio.volume - 0.04);
+    } else {
+      bgmAudio.volume = 0;
+      bgmAudio.pause();
+      clearInterval(fadeInterval);
+      fadeInterval = null;
+    }
+  }, 50);
 }
 
 export function syncSoundButtons() {
@@ -267,11 +203,11 @@ export function toggleBgm() {
   const next = setBgmEnabled(!state.bgmEnabled);
   syncSoundButtons();
   if (next) {
-    startAmbientBgm();
-    showToast('♪ AMBIENT SYNTH BGM: PLAYING');
+    startMp3Bgm();
+    showToast('♪ BGM MP3 TRACK: PLAYING');
   } else {
-    stopAmbientBgm();
-    showToast('♪ AMBIENT SYNTH BGM: PAUSED');
+    stopMp3Bgm();
+    showToast('♪ BGM MP3 TRACK: PAUSED');
   }
   return next;
 }
